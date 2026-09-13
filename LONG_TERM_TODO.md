@@ -28,11 +28,13 @@ Frozen: don't touch DNS, add a `CNAME`, set a custom domain, or cancel anything 
 
 Decided: the CV PDF will be built from a LaTeX source kept in this repo, replacing the hand-uploaded `assets/cv.pdf`. The goal is the same as for publications: one source of truth in the repo.
 
-- [ ] **Add the LaTeX source**, reproducing the content of the current `assets/cv.pdf`.
+- [ ] **Rebuild the CV in LaTeX**, reproducing the content of the current `assets/cv.pdf`.
 - [ ] **Generate the publications section from `data/publications.yml`** rather than maintaining the list twice, so the chain runs Zotero → `publications.yml` → both the site and the CV.
-- [ ] **Decide whether the PDF is built in CI or committed.** Building it in the workflow keeps it in sync but adds a LaTeX engine to the build (`quarto-actions/setup` has a `tinytex` input); committing the PDF avoids that but can drift from the source.
+- [x] **Decide whether the PDF is built in CI or committed.** Building it in the workflow keeps it in sync but adds a LaTeX engine to the build (`quarto-actions/setup` has a `tinytex` input); committing the PDF avoids that but can drift from the source.
+**Decision:** build locally and commit, and add a workflow check that the source code matches the committed pdf.
 - [ ] **Keep the current `assets/cv.pdf` as a fallback** until the generated one looks right side by side.
-- [ ] **Decide whether the CV also gets an HTML page**, or stays a PDF linked from `cv.qmd`.
+- [x] **Decide whether the CV also gets an HTML page**, or stays a PDF linked from `cv.qmd`.
+**Decision:** HTML page that matches the PDF, with a link to download the PDF. The HTML page is generated from the same LaTeX source (or alternatively, a workflow makes sure they match).
 
 ---
 
@@ -40,3 +42,6 @@ Decided: the CV PDF will be built from a LaTeX source kept in this repo, replaci
 
 - [ ] Add blog posts (the listing page is scaffolded and empty; actual posts and any RSS/feed setup are later).
 - [ ] Revisit the design once content is stable.
+- [ ] Add a skill or workflow that checks that the publication list is up to date (e.g., new preprints, published papers, or updated details in published papers). This will normally be a manual check, but could be automated down the line.
+- [x] Add a LinkedIn link.
+- [x] Add color or another visual marker for first-author and last-author publications (including joint-first and joint-last). Also add explainer note at the top of the publications page.
