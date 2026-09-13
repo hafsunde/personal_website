@@ -42,6 +42,8 @@ website:
         text: "ORCiD"
       - href: "https://bsky.app/profile/hfsunde.bsky.social"
         text: "Bluesky"
+      - href: "https://www.linkedin.com/in/hansfredriksunde/"
+        text: "LinkedIn"
   page-footer:
     border: true
     left: "© Hans Fredrik Sunde"
