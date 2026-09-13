@@ -1,0 +1,14 @@
+---
+title: "Publications"
+description-meta: "Peer-reviewed papers and preprints by Hans Fredrik Sunde."
+---
+
+```{r}
+#| results: asis
+source("R/publications.R")
+groups <- pub_groups(read_publications())
+for (heading in names(groups)) {
+  cat("\n## ", heading, "\n\n", sep = "")
+  cat(pub_list_html(groups[[heading]]), "\n")
+}
+```

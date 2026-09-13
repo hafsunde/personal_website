@@ -1,0 +1,249 @@
+/*-- scss:defaults --*/
+
+// Typography: a serif for headings against a system sans for reading text.
+// System stacks only, so the site has no webfont dependency.
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia,
+  "Times New Roman", serif !default;
+
+$font-size-root: 17px !default;
+$line-height-base: 1.65 !default;
+
+$headings-font-family: $font-family-serif !default;
+$headings-font-weight: 600 !default;
+$h1-font-size: 2.1rem !default;
+$h2-font-size: 1.45rem !default;
+
+$primary: #17527d !default;
+$link-color: $primary !default;
+$link-decoration: none !default;
+$link-hover-decoration: underline !default;
+
+$navbar-bg: transparent !default;
+$footer-bg: transparent !default;
+
+// Shared tokens. The dark values are applied under body.quarto-dark below, so
+// light and dark both come out of this one file.
+$rule: #e3e3e0;
+$muted: #5f6368;
+$accent-dark: #8fbde2;
+$rule-dark: #3a3f44;
+$muted-dark: #a7adb3;
+
+/*-- scss:rules --*/
+
+// ── Page frame ────────────────────────────────────────────────────────────────
+
+main.content {
+  max-width: 46rem;
+  padding-top: 1.5rem;
+}
+
+.navbar {
+  border-bottom: 1px solid $rule;
+  font-family: $font-family-serif;
+
+  .navbar-brand {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  .nav-link {
+    font-size: 0.95rem;
+  }
+}
+
+.nav-footer {
+  border-top: 1px solid $rule;
+  font-size: 0.85rem;
+  color: $muted;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid $rule;
+}
+
+// ── Home page profile block ───────────────────────────────────────────────────
+
+.profile {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 1rem;
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.profile-photo {
+  width: 100%;
+  border-radius: 3px;
+  // The source photo is nearly square; crop to a portrait ratio.
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+}
+
+@media (max-width: 640px) {
+  .profile {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .profile-photo {
+    max-width: 200px;
+  }
+}
+
+// ── Publication lists ─────────────────────────────────────────────────────────
+
+.pub-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.pub {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid $rule;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.pub-title {
+  font-family: $font-family-serif;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 0.3rem;
+}
+
+.pub-meta {
+  margin: 0;
+  font-size: 0.92rem;
+  color: $muted;
+
+  strong {
+    color: inherit;
+    font-weight: 700;
+  }
+}
+
+.pub-links {
+  margin: 0.45rem 0 0;
+  font-size: 0.85rem;
+
+  a {
+    margin-right: 1rem;
+    white-space: nowrap;
+  }
+
+  a:last-child {
+    margin-right: 0;
+  }
+}
+
+.pub-doi {
+  font-family: var(--bs-font-monospace);
+  font-size: 0.8rem;
+}
+
+.more-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+// ── CV page ───────────────────────────────────────────────────────────────────
+
+.cv-download {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  border: 1px solid $primary;
+  border-radius: 3px;
+  font-size: 0.95rem;
+
+  &:hover {
+    background: $primary;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.cv-embed {
+  display: block;
+  width: 100%;
+  height: 80vh;
+  min-height: 500px;
+  margin-top: 1.5rem;
+  border: 1px solid $rule;
+  border-radius: 3px;
+}
+
+@media (max-width: 640px) {
+  // Inline PDF viewers are unusable on phones; the download link stands alone.
+  .cv-embed {
+    display: none;
+  }
+}
+
+// ── Dark mode ─────────────────────────────────────────────────────────────────
+// Bootswatch darkly supplies the base palette; these are the overrides for the
+// custom rules above.
+
+body.quarto-dark {
+  .navbar,
+  .nav-footer {
+    border-color: $rule-dark;
+  }
+
+  h2 {
+    border-bottom-color: $rule-dark;
+  }
+
+  .pub {
+    border-bottom-color: $rule-dark;
+  }
+
+  .pub-meta,
+  .nav-footer {
+    color: $muted-dark;
+  }
+
+  a {
+    color: $accent-dark;
+  }
+
+  .cv-download {
+    border-color: $accent-dark;
+    color: $accent-dark;
+
+    &:hover {
+      background: $accent-dark;
+      color: #16181a;
+    }
+  }
+
+  .cv-embed {
+    border-color: $rule-dark;
+  }
+}

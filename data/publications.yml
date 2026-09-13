@@ -1,0 +1,241 @@
+# Publications — single source of truth for the site.
+#
+# publications.qmd renders the full list from this file; index.qmd renders the
+# entries with `selected: true`. Adding a paper is one entry here and nothing else.
+# Grouping (preprints first, then years descending) and ordering are computed.
+#
+# Built from Zotero via MCP and verified against the publisher record: every DOI
+# below resolves, and titles, author strings and venues were taken from DOI
+# content negotiation (Crossref), not from a rendered page.
+#
+# Fields:
+#   id        unique key, firstauthor + year + keyword
+#   authors   ["Family, I.I.", ...]; set `et_al: true` for very large collaborations
+#   venue     journal, or preprint server for `type: preprint`
+#   year      issue year of the version of record, falling back to the online
+#             date where there is no issue (matches ORCID 0000-0001-8797-5422)
+#   type      article | preprint
+#   selected  editorial — featured on the home page
+#   links     editorial — threads and open-access copies; not bibliographic
+
+# -- Preprints -----------------------------------------------------------------
+
+- id: malawsky2026phantom
+  authors: ["Malawsky, D.S.", "Hegemann, L.", "Wootton, O.", "Havdahl, A.K.", "Sunde, H.F.", "Martin, H.C."]
+  title: "Phantom genetic nurture: assortative mating accounts for most of the apparent association between parental genotypes and childhood cognitive performance"
+  venue: "bioRxiv"
+  year: 2026
+  doi: "10.64898/2026.09.01.748516"
+  type: preprint
+
+- id: vanbergen2025educational
+  authors: ["van Bergen, E.", "Sunde, H.F.", "Rowland, C.F.", "Melby-Lervåg, M.", "Torvik, F.A."]
+  title: "Why educational inequality runs in families: Genetics matter more than environment"
+  venue: "PsyArXiv"
+  year: 2025
+  doi: "10.31234/osf.io/rehdj_v1"
+  type: preprint
+
+# -- 2026 ----------------------------------------------------------------------
+
+- id: sunde2026divorce
+  authors: ["Sunde, H.F.", "Dierker, P."]
+  title: "Are Spouses Similar in Divorce? Investigating Spousal Similarity in Couple-Shared Outcomes"
+  venue: "Twin Research and Human Genetics"
+  year: 2026
+  doi: "10.1017/thg.2026.10050"
+  type: article
+  selected: true
+  links:
+    bluesky: "https://bsky.app/profile/hfsunde.bsky.social/post/3mj4z3nwaic2o"
+
+- id: sunde2026parentalincome
+  authors: ["Sunde, H.F.", "Eilertsen, E.M.", "Kinge, J.M.", "Kleppestø, T.H.", "Nordmo, M.", "Caspi, A.", "Moffitt, T.E.", "Torvik, F.A."]
+  title: "Parental income and psychiatric disorders from age 10 to 40: a genetically informative population study"
+  venue: "Journal of Child Psychology and Psychiatry"
+  year: 2026
+  doi: "10.1111/jcpp.70022"
+  type: article
+  selected: true
+  links:
+    bluesky: "https://bsky.app/profile/hfsunde.bsky.social/post/3lvm2rppsws2q"
+    bluesky_preprint: "https://bsky.app/profile/hfsunde.bsky.social/post/3l7b5fz6yva22"
+    preprint: "https://doi.org/10.1101/2024.10.21.24315865"
+
+- id: aczel2026robustness
+  authors: ["Aczel, B."]
+  et_al: true
+  title: "Investigating the analytical robustness of the social and behavioural sciences"
+  venue: "Nature"
+  year: 2026
+  doi: "10.1038/s41586-025-09844-9"
+  type: article
+
+- id: andersen2026parenthood
+  authors: ["Andersen, M.L.", "Sunde, H.F.", "Hart, R.K.", "Torvik, F.A."]
+  title: "Parenthood and mental health throughout the life course: A total population study"
+  venue: "Social Psychiatry and Psychiatric Epidemiology"
+  year: 2026
+  doi: "10.1007/s00127-026-03091-7"
+  type: article
+
+- id: andersen2026grandparenthood
+  authors: ["Andersen, M.L.", "Hart, R.K.", "Sunde, H.F.", "Davies, N.M.", "Torvik, F.A."]
+  title: "The cost of caring: Gendered health and labor market effects of grandparenthood"
+  venue: "Proceedings of the National Academy of Sciences"
+  year: 2026
+  doi: "10.1073/pnas.2535409123"
+  type: article
+
+- id: reme2026parentalincome
+  authors: ["Reme, B.-A.", "Sunde, H.F.", "Torvik, F.A.", "Kinge, J.M.", "Strand, B.H.", "Wörn, J."]
+  title: "Parental income in childhood and health outcomes across age groups: a register-based study from Norway"
+  venue: "BMC Medicine"
+  year: 2026
+  doi: "10.1186/s12916-026-04735-w"
+  type: article
+
+- id: landmark2026bds
+  authors: ["Landmark, L.", "Sunde, H.F.", "Fors, E.A.", "Kennair, L.E.O.", "Reme, S.E."]
+  title: "Prevalence of Bodily Distress Syndrome and Prediction of Patient Outcomes: Cohort Study of 3762 Individuals With Persistent Pain"
+  venue: "European Journal of Pain"
+  year: 2026
+  doi: "10.1002/ejp.70212"
+  type: article
+
+- id: eilertsen2026maternal
+  authors: ["Eilertsen, E.M.", "Eftedal, N.H.", "Cheesman, R.", "Ayorech, Z.", "Ebeltoft, J.C.", "Sunde, H.F.", "Tandberg, A.D.", "Torvik, F.A.", "Ystrom, E."]
+  title: "Multivariate maternal effects across the internalizing–externalizing spectrum in childhood: results from the Norwegian mother, father, and child cohort study"
+  venue: "Journal of Child Psychology and Psychiatry"
+  year: 2026
+  doi: "10.1111/jcpp.70111"
+  type: article
+
+- id: kleppesto2026attractive
+  authors: ["Kleppestø, T.H.", "Bendixen, M.", "Sunde, H.F.", "Zietsch, B.", "Harper, K.T.", "Karlsen, H.", "Stavang, M.", "Eftedal, N.H.", "Kennair, L.E.O."]
+  title: "The attractive personality: Like me, but better"
+  venue: "Evolution and Human Behavior"
+  year: 2026
+  doi: "10.1016/j.evolhumbehav.2025.106811"
+  type: article
+
+# -- 2025 ----------------------------------------------------------------------
+
+- id: sunde2025indirect
+  authors: ["Sunde, H.F.", "Eilertsen, E.M.", "Torvik, F.A."]
+  title: "Understanding indirect assortative mating and its intergenerational consequences for educational attainment"
+  venue: "Nature Communications"
+  year: 2025
+  doi: "10.1038/s41467-025-60483-0"
+  type: article
+  selected: true
+  links:
+    bluesky: "https://bsky.app/profile/hfsunde.bsky.social/post/3lrefdcxbq22l"
+    twitter: "https://x.com/hfsunde/status/1806003525249315040"
+
+- id: nordmo2025cognitive
+  authors: ["Nordmo, M.", "Sunde, H.F.", "Kleppestø, T.H.", "Nordmo, M.", "Caspi, A.", "Moffitt, T.E.", "Torvik, F.A."]
+  title: "Cognitive Abilities and Educational Attainment as Antecedents of Mental Disorders: A Total Population Study of Males"
+  venue: "Psychological Science"
+  year: 2025
+  doi: "10.1177/09567976251347221"
+  type: article
+
+- id: eftedal2025beyond
+  authors: ["Eftedal, N.H.", "Eilertsen, E.M.", "Sunde, H.F.", "Kleppestø, T.H.", "Ystrom, E.", "Czajkowski, N.O."]
+  title: "Beyond additive genetic effects: Explaining family resemblance in school performance across millions of pairs of Norwegian relatives"
+  venue: "Proceedings of the National Academy of Sciences"
+  year: 2025
+  doi: "10.1073/pnas.2419627122"
+  type: article
+
+- id: skirbekk2025personality
+  authors: ["Skirbekk, V.", "Blekesaune, M.", "Sunde, H.F."]
+  title: "Personality and fertility dynamics in Norway across four decades – Findings from the HUNT survey"
+  venue: "Personality and Individual Differences"
+  year: 2025
+  doi: "10.1016/j.paid.2024.112862"
+  type: article
+
+# -- 2024 ----------------------------------------------------------------------
+
+- id: sunde2024genetic
+  authors: ["Sunde, H.F.", "Eftedal, N.H.", "Cheesman, R.", "Corfield, E.C.", "Kleppestø, T.H.", "Seierstad, A.C.", "Ystrom, E.", "Eilertsen, E.M.", "Torvik, F.A."]
+  title: "Genetic similarity between relatives provides evidence on the presence and history of assortative mating"
+  venue: "Nature Communications"
+  year: 2024
+  doi: "10.1038/s41467-024-46939-9"
+  type: article
+  selected: true
+  links:
+    twitter: "https://x.com/hfsunde/status/1772681883622441120"
+    twitter2: "https://twitter.com/farteinask/status/1674537331997409280"
+    twitter3: "https://twitter.com/hfsunde/status/1676959395648012289"
+
+- id: torvik2024nonrandom
+  authors: ["Torvik, F.A.", "Sunde, H.F.", "Cheesman, R.", "Eftedal, N.H.", "Keller, M.C.", "Ystrom, E.", "Eilertsen, E.M."]
+  title: "Non-random mating patterns within and across education and mental and somatic health"
+  venue: "Nature Communications"
+  year: 2024
+  doi: "10.1038/s41467-024-54966-9"
+  type: article
+
+- id: caspi2024encounters
+  authors: ["Caspi, A.", "Houts, R.M.", "Moffitt, T.E.", "Richmond-Rakerd, L.S.", "Hanna, M.R.", "Sunde, H.F.", "Torvik, F.A."]
+  title: "A nationwide analysis of 350 million patient encounters reveals a high volume of mental-health conditions in primary care"
+  venue: "Nature Mental Health"
+  year: 2024
+  doi: "10.1038/s44220-024-00310-5"
+  type: article
+
+- id: nordmo2024diminishing
+  authors: ["Nordmo, M.", "Kleppestø, T.H.", "Reme, B.-A.", "Sunde, H.F.", "von Soest, T.", "Torvik, F.A."]
+  title: "The diminishing association between adolescent mental disorders and educational performance from 2006–2019"
+  venue: "JCPP Advances"
+  year: 2024
+  doi: "10.1002/jcv2.12239"
+  type: article
+
+- id: landmark2024pain
+  authors: ["Landmark, L.", "Sunde, H.F.", "Fors, E.A.", "Kennair, L.E.O.", "Sayadian, A.", "Backelin, C.", "Reme, S.E."]
+  title: "Associations between pain intensity, psychosocial factors, and pain-related disability in 4285 patients with chronic pain"
+  venue: "Scientific Reports"
+  year: 2024
+  doi: "10.1038/s41598-024-64059-8"
+  type: article
+
+- id: kleppesto2024adhd
+  authors: ["Kleppestø, T.H.", "Eilertsen, E.M.", "van Bergen, E.", "Sunde, H.F.", "Zietsch, B.", "Nordmo, M.", "Eftedal, N.H.", "Havdahl, A.", "Ystrom, E.", "Torvik, F.A."]
+  title: "Intergenerational transmission of ADHD behaviors: genetic and environmental pathways"
+  venue: "Psychological Medicine"
+  year: 2024
+  doi: "10.1017/S003329172300315X"
+  type: article
+
+# -- 2023 ----------------------------------------------------------------------
+
+- id: nordmo2023internalizing
+  authors: ["Nordmo, M.", "Kleppestø, T.H.", "Sunde, H.F.", "Flatø, M.", "Demange, P.", "Torvik, F.A."]
+  title: "The association between parental internalizing disorders and child school performance"
+  venue: "npj Science of Learning"
+  year: 2023
+  doi: "10.1038/s41539-023-00182-x"
+  type: article
+
+# -- 2022 ----------------------------------------------------------------------
+
+- id: sunde2022adhd
+  authors: ["Sunde, H.F.", "Kleppestø, T.H.", "Gustavson, K.", "Nordmo, M.", "Reme, B.-A.", "Torvik, F.A."]
+  title: "The ADHD deficit in school performance across sex and parental education: A prospective sibling-comparison register study of 344,152 Norwegian adolescents"
+  venue: "JCPP Advances"
+  year: 2022
+  doi: "10.1002/jcv2.12064"
+  type: article
+
+- id: lisoy2022music
+  authors: ["Lisøy, R.S.", "Pfuhl, G.", "Sunde, H.F.", "Biegler, R."]
+  title: "Sweet spot in music—Is predictability preferred among persons with psychotic-like experiences or autistic traits?"
+  venue: "PLOS ONE"
+  year: 2022
+  doi: "10.1371/journal.pone.0275308"
+  type: article

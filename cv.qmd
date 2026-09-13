@@ -1,0 +1,11 @@
+---
+title: "CV"
+description-meta: "Academic CV for Hans Fredrik Sunde."
+---
+
+[Download CV (PDF)](assets/cv.pdf){.cv-download}
+
+<object class="cv-embed" data="assets/cv.pdf" type="application/pdf">
+  <p>Your browser cannot display the PDF inline.
+  <a href="assets/cv.pdf">Download the CV</a> instead.</p>
+</object>

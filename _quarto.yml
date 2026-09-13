@@ -1,0 +1,54 @@
+project:
+  type: website
+  output-dir: _site
+  execute-dir: project
+  resources:
+    - assets/cv.pdf
+
+execute:
+  echo: false
+  warning: false
+  message: false
+
+website:
+  title: "Hans Fredrik Sunde"
+  site-url: "https://hansfredriksunde.com"
+  description: >-
+    Hans Fredrik Sunde is a postdoctoral researcher at the Centre for Fertility
+    and Health, Norwegian Institute of Public Health, working on assortative
+    mating, social differences, and mental health across generations.
+  navbar:
+    title: "Hans Fredrik Sunde"
+    left:
+      - href: index.qmd
+        text: Home
+      - href: publications.qmd
+        text: Publications
+      - href: cv.qmd
+        text: CV
+      - href: blog/index.qmd
+        text: Blog
+      - href: contact.qmd
+        text: Contact
+    right:
+      - href: "https://scholar.google.com/citations?user=obk155AAAAAJ&hl=en"
+        text: "Google Scholar"
+      - href: "https://orcid.org/0000-0001-8797-5422"
+        text: "ORCiD"
+      - href: "https://bsky.app/profile/hfsunde.bsky.social"
+        text: "Bluesky"
+  page-footer:
+    border: true
+    left: "© Hans Fredrik Sunde"
+    right: "Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme:
+      light: [cosmo, assets/styles.scss]
+      dark: [darkly, assets/styles.scss]
+    toc: false
+    page-layout: article
+    anchor-sections: false
+    link-external-newwindow: true
+    link-external-icon: false

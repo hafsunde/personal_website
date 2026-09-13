@@ -1,0 +1,12 @@
+---
+title: "Blog"
+description-meta: "Occasional writing by Hans Fredrik Sunde."
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  fields: [date, title, description]
+  feed: false
+---
+
+Nothing here yet.
