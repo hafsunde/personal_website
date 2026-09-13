@@ -2,6 +2,10 @@ project:
   type: website
   output-dir: _site
   execute-dir: project
+  # Explicit, so the planning docs at the repo root stay out of the site.
+  render:
+    - "*.qmd"
+    - "blog/*.qmd"
   resources:
     - assets/cv.pdf
 
