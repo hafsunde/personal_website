@@ -2,7 +2,7 @@
 
 Source for Hans Fredrik Sunde's academic site, replacing a Squarespace site currently served at hansfredriksunde.com.
 
-Read `PLAN.md` before starting work. Deferred work is in `LONG_TERM_TODO.md`.
+Parked and upcoming work is in `LONG_TERM_TODO.md` — read it before starting work.
 
 ## Stack
 
@@ -12,14 +12,14 @@ Rendering happens in `.github/workflows/publish.yml` on every push to `main`, so
 
 ## Hard rules
 
-Pushing to `main` publishes the site (once Pages is enabled). Treat a push as publishing: don't push unless asked.
+Pushing to `main` publishes the site within a couple of minutes. Treat a push as publishing: don't push unless asked.
 
 The domain cutover and Squarespace retirement are **frozen** and require an explicit go-ahead from Hans Fredrik. Without one, do not:
 
 - change DNS, add a `CNAME` file, set a custom domain, or touch anything at the registrar
 - cancel or modify the Squarespace site
 
-The live site stays on Squarespace until the new one is reviewed at the `github.io` URL and approved.
+The new site has been reviewed at `hafsunde.github.io/personal_website/`. Squarespace keeps serving the domain until the cutover gets its go-ahead.
 
 ## Publications
 
@@ -73,7 +73,7 @@ Some publishers (Wiley, PNAS) return 403 to scripted HTML requests. Check DOIs w
 - `_site/` and `.quarto/` are build output — gitignored, never committed.
 - Assets (headshot, CV PDF, SCSS) live in `assets/`.
 - Styling goes in `assets/styles.scss` as theme variables and rules, not inline HTML or per-page CSS blocks. The same file feeds both the light (cosmo) and dark (darkly) themes; dark overrides sit under `body.quarto-dark`.
-- `_quarto.yml` has an explicit `render:` list so the planning docs at the repo root stay out of the site. New top-level pages must match it (`*.qmd`, `blog/*.qmd`).
+- `_quarto.yml` has an explicit `render:` list so `CLAUDE.md` and `LONG_TERM_TODO.md` at the repo root stay out of the site. New top-level pages must match it (`*.qmd`, `blog/*.qmd`).
 - The blog under `blog/` is a scaffolded listing page with no posts yet. Leave it empty unless asked. The render warning that the listing matches no files is expected until the first post.
 - Prose on the site is Hans Fredrik's own voice — port existing text as-is rather than rewriting it, and flag anything that reads as stale instead of silently updating it.
 - The contact page keeps pointing at the FHI employee page; no email address on the site.
@@ -82,4 +82,4 @@ Some publishers (Wiley, PNAS) return 403 to scripted HTML requests. Check DOIs w
 
 Don't guess at these; ask.
 
-- Whether the CV should stay a PDF link only, or also get an HTML version (see `LONG_TERM_TODO.md`).
+- Whether the CV, which will be built from LaTeX in this repo, also gets an HTML page (see `LONG_TERM_TODO.md`).

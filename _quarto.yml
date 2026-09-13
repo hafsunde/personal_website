@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: _site
   execute-dir: project
-  # Explicit, so the planning docs at the repo root stay out of the site.
+  # Explicit, so CLAUDE.md and LONG_TERM_TODO.md at the repo root stay out of the site.
   render:
     - "*.qmd"
     - "blog/*.qmd"
