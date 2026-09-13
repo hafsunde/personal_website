@@ -40,6 +40,12 @@ main.content {
   padding-top: 1.5rem;
 }
 
+// The header is fixed and slides back over the page when scrolling up, so it
+// needs an opaque background. --bs-body-bg follows the light/dark theme.
+#quarto-header {
+  background-color: var(--bs-body-bg);
+}
+
 .navbar {
   border-bottom: 1px solid $rule;
   font-family: $font-family-serif;
