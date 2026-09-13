@@ -54,12 +54,18 @@ pub_links <- function(pub) {
   paste0('<p class="pub-links">', paste(items, collapse = ""), "</p>")
 }
 
+pub_description <- function(pub) {
+  if (is.null(pub$description)) return("")
+  paste0('<p class="pub-description">', esc(pub$description), "</p>")
+}
+
 pub_html <- function(pub) {
   paste0(
     '<li class="pub">',
     '<p class="pub-title">', esc(pub$title), "</p>",
     '<p class="pub-meta">', pub_authors(pub), " (", pub$year, "). ",
     "<em>", esc(pub$venue), "</em>.</p>",
+    pub_description(pub),
     pub_links(pub),
     "</li>"
   )

@@ -36,11 +36,14 @@ Entry shape:
   doi: "10.1038/s41467-025-60483-0"
   type: article          # article | preprint
   selected: true
+  description: "Shows that ..."
   links:
     bluesky: "https://..."
 ```
 
 For very large collaborations, list only the first author and add `et_al: true`.
+
+`description` is one sentence on what the paper does or finds, shown under the author line. It must add something the title doesn't already say — never restate or paraphrase the title. Write it from the paper's abstract, not from memory. Like `selected` and `links`, it is editorial: it doesn't come from Zotero, so preserve it when regenerating entries.
 
 `year` is the issue year of the version of record, falling back to the online date when there is no issue. This matches ORCID; don't use the online-first year.
 

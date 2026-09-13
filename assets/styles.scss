@@ -154,17 +154,22 @@ h2 {
   }
 }
 
+.pub-description {
+  margin: 0.4rem 0 0;
+  font-size: 0.95rem;
+}
+
+// One link per line. Long DOIs may break anywhere rather than overflow on
+// narrow screens.
 .pub-links {
   margin: 0.45rem 0 0;
   font-size: 0.85rem;
 
   a {
-    margin-right: 1rem;
-    white-space: nowrap;
-  }
-
-  a:last-child {
-    margin-right: 0;
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    overflow-wrap: anywhere;
   }
 }
 
