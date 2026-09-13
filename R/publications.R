@@ -1,8 +1,8 @@
 # Rendering helpers for data/publications.yml.
 #
 # publications.qmd uses pub_groups() for the full list; index.qmd uses
-# selected_publications() for the home page. Nothing here needs touching when a
-# paper lands — that is one entry in the YAML.
+# selected_html() for the selected-paper panels on the home page. Nothing here
+# needs touching when a paper lands — that is one entry in the YAML.
 
 ME <- "Sunde, H.F."
 
@@ -121,7 +121,39 @@ pub_groups <- function(pubs) {
   groups
 }
 
-selected_publications <- function(pubs) {
-  sel <- pubs[vapply(pubs, function(p) isTRUE(p$selected), logical(1))]
-  sel[order(-vapply(sel, function(p) as.integer(p$year), integer(1)))]
+# Selected papers (home page). data/selected.yml sets the order and holds the
+# editorial content; the reference itself comes from data/publications.yml.
+read_selected <- function(path = "data/selected.yml") {
+  sel <- yaml::read_yaml(path)
+  stopifnot(is.list(sel), length(sel) > 0)
+  sel
+}
+
+selected_html <- function(selected, pubs) {
+  by_id <- setNames(pubs, vapply(pubs, function(p) p$id, character(1)))
+  panels <- vapply(selected, function(s) {
+    pub <- by_id[[s$id]]
+    if (is.null(pub)) stop("data/selected.yml: no publication with id ", s$id)
+    url <- paste0("https://doi.org/", pub$doi)
+    abstract <- paste(vapply(s$abstract, function(sec) {
+      heading <- if (is.null(sec$heading)) "" else paste0("<strong>", esc(sec$heading), ".</strong> ")
+      paste0("<p>", heading, esc(sec$text), "</p>")
+    }, character(1)), collapse = "")
+    paste0(
+      '<article class="selected-paper">',
+      '<a class="selected-image" href="', url, '">',
+      '<img src="', s$image, '" alt="First page of the published article" loading="lazy">',
+      "</a>",
+      '<div class="selected-body">',
+      '<h3 class="selected-title"><a href="', url, '">', esc(pub$title), "</a></h3>",
+      '<p class="pub-meta">', pub_authors(pub), " (", pub$year, "). ",
+      "<em>", esc(pub$venue), "</em>.</p>",
+      '<p class="selected-label">Abstract</p>',
+      '<div class="selected-abstract">', abstract, "</div>",
+      pub_links(pub),
+      "</div>",
+      "</article>"
+    )
+  }, character(1))
+  paste0('<div class="selected-papers">', paste(panels, collapse = ""), "</div>")
 }

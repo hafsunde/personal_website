@@ -8,6 +8,7 @@ project:
     - "blog/*.qmd"
   resources:
     - assets/cv.pdf
+    - assets/selected/*.jpg
 
 execute:
   echo: false

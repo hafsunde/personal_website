@@ -23,7 +23,7 @@ The new site has been reviewed at `hafsunde.github.io/personal_website/`. Square
 
 ## Publications
 
-`data/publications.yml` is the single source of truth **for the site**. `publications.qmd` and the selected-papers block on `index.qmd` both generate from it at render time via `R/publications.R` — never hand-edit a publication list into a `.qmd`. Adding a paper should be one YAML entry and nothing else.
+`data/publications.yml` is the single source of truth **for the site's bibliographic data**. `publications.qmd` generates from it at render time via `R/publications.R`, and the selected papers on `index.qmd` take their references from it — never hand-edit a publication list into a `.qmd`. Adding a paper should be one YAML entry and nothing else.
 
 Entry shape:
 
@@ -35,7 +35,6 @@ Entry shape:
   year: 2025
   doi: "10.1038/s41467-025-60483-0"
   type: article          # article | preprint
-  selected: true
   description: "Shows that ..."
   links:
     bluesky: "https://..."
@@ -43,13 +42,22 @@ Entry shape:
 
 For very large collaborations, list only the first author and add `et_al: true`.
 
-`description` is one sentence on what the paper does or finds, shown under the author line. It must add something the title doesn't already say — never restate or paraphrase the title. Write it from the paper's abstract, not from memory. Like `selected` and `links`, it is editorial: it doesn't come from Zotero, so preserve it when regenerating entries.
+`description` is one sentence on what the paper does or finds, shown under the author line. It must add something the title doesn't already say — never restate or paraphrase the title. Write it from the paper's abstract, not from memory. Like `authorship` and `links`, it is editorial: it doesn't come from Zotero, so preserve it when regenerating entries.
 
 First- and last-author markers are computed from his position in `authors`. Joint first or last authorship can't be computed, so it is stored as `authorship: joint-first` or `authorship: joint-last`. Set it only when Hans Fredrik confirms it — don't infer it from author order or publisher footnotes — and preserve it when regenerating entries.
 
 `year` is the issue year of the version of record, falling back to the online date when there is no issue. This matches ORCID; don't use the online-first year.
 
 Grouping (preprints first, then years descending) and ordering are computed, not stored.
+
+### Selected papers
+
+The home page shows a hand-picked set of papers from `data/selected.yml`, ordered by importance rather than date. Ask Hans Fredrik before changing which papers are featured or their order. They don't follow the publications-page rules: no authorship markers and no descriptions.
+
+Each entry references a publication by `id` (title, authors, venue, year, DOI and links come from `data/publications.yml`) and adds:
+
+- `image`: the first page of the **published** PDF, rendered to `assets/selected/<id>.jpg`. Take it from the Zotero attachment, and check it isn't the supplementary PDF, which is often attached to the same item.
+- `abstract`: the publisher's abstract, verbatim, as a list of sections with an optional `heading` (for structured abstracts such as JCPP's).
 
 ### Zotero
 
@@ -63,7 +71,7 @@ Working with the library:
 - Watch for the **preprint/published duplicate**: the same paper often exists twice, once as an OSF, SSRN or medRxiv preprint and once as the journal version. Only genuinely unpublished work should end up as `type: preprint`. When both exist, keep the published version and drop the preprint entry. Recheck existing preprints too — they get published.
 - Zotero can lag behind ORCID; cross-check ORCID for papers missing from the library.
 - Zotero metadata is often imported rather than curated, so expect title-case inconsistency, missing DOIs, "Advance online publication" venues, and author name variants. Normalise these on the way into the YAML.
-- `selected: true` and the `links:` block are editorial, not bibliographic. They don't come from Zotero — preserve whatever is already in the YAML when regenerating, and ask before changing which papers are featured.
+- `description`, `authorship` and the `links:` block are editorial, not bibliographic. They don't come from Zotero — preserve whatever is already in the YAML when regenerating.
 
 For maintenance later: adding a new paper should be "pull it from Zotero, append the entry, push" — not a manual transcription.
 
@@ -76,7 +84,7 @@ Some publishers (Wiley, PNAS) return 403 to scripted HTML requests. Check DOIs w
 ## Conventions
 
 - `_site/` and `.quarto/` are build output — gitignored, never committed.
-- Assets (headshot, CV PDF, SCSS) live in `assets/`.
+- Assets (headshot, CV PDF, SCSS, selected-paper first pages) live in `assets/`.
 - Styling goes in `assets/styles.scss` as theme variables and rules, not inline HTML or per-page CSS blocks. The same file feeds both the light (cosmo) and dark (darkly) themes; dark overrides sit under `body.quarto-dark`.
 - `_quarto.yml` has an explicit `render:` list so `CLAUDE.md` and `LONG_TERM_TODO.md` at the repo root stay out of the site. New top-level pages must match it (`*.qmd`, `blog/*.qmd`).
 - The blog under `blog/` is a scaffolded listing page with no posts yet. Leave it empty unless asked. The render warning that the listing matches no files is expected until the first post.

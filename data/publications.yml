@@ -1,7 +1,8 @@
 # Publications — single source of truth for the site.
 #
-# publications.qmd renders the full list from this file; index.qmd renders the
-# entries with `selected: true`. Adding a paper is one entry here and nothing else.
+# publications.qmd renders the full list from this file, and the selected papers
+# on the home page (data/selected.yml) take their references from it. Adding a
+# paper is one entry here and nothing else.
 # Grouping (preprints first, then years descending) and ordering are computed.
 #
 # Built from Zotero via MCP and verified against the publisher record: every DOI
@@ -15,7 +16,6 @@
 #   year      issue year of the version of record, falling back to the online
 #             date where there is no issue (matches ORCID 0000-0001-8797-5422)
 #   type      article | preprint
-#   selected  editorial — featured on the home page
 #   description  editorial — one sentence on what the paper does or finds,
 #             written from the abstract; must not restate the title
 #   authorship  editorial — joint-first | joint-last, set only when Hans Fredrik
@@ -53,7 +53,6 @@
   doi: "10.1017/thg.2026.10050"
   type: article
   description: "Shows how chaining in-laws lets an extended twin model separate spousal similarity from individual effects, finding in 353,210 Norwegian marriages that ignoring it inflates estimates of individual-level influences on divorce."
-  selected: true
   links:
     bluesky: "https://bsky.app/profile/hfsunde.bsky.social/post/3mj4z3nwaic2o"
 
@@ -65,7 +64,6 @@
   doi: "10.1111/jcpp.70022"
   type: article
   description: "Across 2.5 million Norwegians, lower parental income is linked to nearly all psychiatric disorders, but the pattern is consistent with a causal effect only in adolescence, while shared family risk factors can fully explain it in adulthood."
-  selected: true
   links:
     bluesky: "https://bsky.app/profile/hfsunde.bsky.social/post/3lvm2rppsws2q"
     bluesky_preprint: "https://bsky.app/profile/hfsunde.bsky.social/post/3l7b5fz6yva22"
@@ -145,7 +143,6 @@
   doi: "10.1038/s41467-025-60483-0"
   type: article
   description: "Family models using the partners of twins and siblings in 1.5 million Norwegians show that couples match on education mainly through indirect assortment, especially social homogamy, and that about 38% of parent–child similarity in education is environmental."
-  selected: true
   links:
     bluesky: "https://bsky.app/profile/hfsunde.bsky.social/post/3lrefdcxbq22l"
     twitter: "https://x.com/hfsunde/status/1806003525249315040"
@@ -187,7 +184,6 @@
   doi: "10.1038/s41467-024-46939-9"
   type: article
   description: "Polygenic scores of 47,135 Norwegian co-parents reveal assortative mating in nine of sixteen traits, and greater genetic variance among offspring for six of them, including educational attainment, indicates that family similarity is still increasing."
-  selected: true
   links:
     twitter: "https://x.com/hfsunde/status/1772681883622441120"
     twitter2: "https://twitter.com/farteinask/status/1674537331997409280"

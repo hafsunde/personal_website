@@ -1,0 +1,124 @@
+# Selected papers for the home page, in display order: most important first,
+# not by date. Set by hand; ask Hans Fredrik before changing the set or order.
+#
+# Title, authors, venue, year, DOI and links come from data/publications.yml
+# via `id`. Everything in this file is editorial and home-page only.
+#
+# Fields:
+#   id        must match an entry in data/publications.yml
+#   image     first page of the published PDF (not the supplement), rendered
+#             from the Zotero attachment to assets/selected/<id>.jpg
+#   abstract  the publisher's abstract, verbatim, as a list of sections; each
+#             section has `text` and an optional `heading`
+
+- id: sunde2025indirect
+  image: assets/selected/sunde2025indirect.jpg
+  abstract:
+    - text: >-
+        We develop a framework for understanding indirect assortative mating and
+        provide updated definitions of key terms. We then develop family models that
+        use partners of twins and siblings to freely estimate the degree of genetic
+        and social homogamy, and account for it when investigating sources of
+        parent-offspring similarity. We applied the models to educational attainment
+        using 1,545,444 individuals in 212,070 extended families in the Norwegian
+        population and Norwegian Twin Registry. Partner similarity in education was
+        better explained by indirect assortment than direct assortment on observed
+        educational attainment, with social homogamy being particularly important. The
+        implied genotypic partner correlation (r = 0.34) was comparable to earlier
+        studies, and higher than expected under direct assortment. About 38% of the
+        parent-offspring correlation (r = 0.34) was attributable to various forms of
+        environmental transmission. Alternative models that assumed direct assortment
+        estimated environmental transmission to be lower, but these did not fit the
+        data well.
+
+- id: sunde2024genetic
+  image: assets/selected/sunde2024genetic.jpg
+  abstract:
+    - text: >-
+        Assortative mating – the non-random mating of individuals with similar traits
+        – is known to increase trait-specific genetic variance and genetic similarity
+        between relatives. However, empirical evidence is limited for many traits, and
+        the implications hinge on whether assortative mating has started recently or
+        many generations ago. Here we show theoretically and empirically that genetic
+        similarity between relatives can provide evidence on the presence and history
+        of assortative mating. First, we employed path analysis to understand how
+        assortative mating affects genetic similarity between family members across
+        generations, finding that similarity between distant relatives is more
+        affected than close relatives. Next, we correlated polygenic indices of 47,135
+        co-parents from the Norwegian Mother, Father, and Child Cohort Study (MoBa)
+        and found genetic evidence of assortative mating in nine out of sixteen
+        examined traits. The same traits showed elevated similarity between relatives,
+        especially distant relatives. Six of the nine traits, including educational
+        attainment, showed greater genetic variance among offspring, which is
+        inconsistent with stable assortative mating over many generations. These
+        results suggest an ongoing increase in familial similarity for these traits.
+        The implications of this research extend to genetic methodology and the
+        understanding of social and economic disparities.
+
+- id: sunde2026divorce
+  image: assets/selected/sunde2026divorce.jpg
+  abstract:
+    - text: >-
+        In behavioral genetics, divorce is typically analyzed as an individual-level
+        outcome, even though marital dissolution can only be experienced by couples.
+        In this article, we discuss how assortative mating complicates the study of
+        couple-shared outcomes because individual-level effects can be confounded by
+        effects of the spouse. We then show how chain-linking affines (i.e., in-laws)
+        provides sufficient information to estimate spousal similarity for
+        couple-shared outcomes, which we incorporate into an extended twin model that
+        we use to test for sex differences and assortative mating for individuals’
+        liability to divorce. We linked the Norwegian twin register to the Norwegian
+        population register and constructed 124,544 extended family units (1196 units
+        with monozygotic twins) comprising 353,210 marriages entered between 1983 and
+        2008. We found that divorce was significantly correlated among affines, and
+        that female relatives were more highly correlated than male relatives. The
+        extended twin model estimated a strong correlation (r = .60, SE = .10) between
+        female and male familial factors. Couples’ liability to divorce was attributed
+        to 18% (SE = 5%) female and 10% (SE = 3%) male familial factors, with an
+        additional 16% (SE = 4%) accounted for by their correlation. Estimates from a
+        classic twin model were considerably higher. These findings show that spousal
+        similarity is an important source of variation in divorce liability and that
+        failing to model it can inflate estimates of individual-level effects.
+        Overall, the analytical framework offers a blueprint for dissecting any
+        couple-shared outcome into sex-specific and assortative components.
+
+- id: sunde2026parentalincome
+  image: assets/selected/sunde2026parentalincome.jpg
+  abstract:
+    - heading: Background
+      text: >-
+        Lower parental income is associated with more psychiatric disorders among
+        offspring, but it is unclear if this association reflects effects of parental
+        income (social causation) or shared risk factors (social selection). Prior
+        research finds contradictory results, which may be due to age differences
+        between the studied offspring.
+    - heading: Methods
+      text: >-
+        Here, we studied psychiatric disorders in the entire Norwegian population aged
+        10 to 40 years between 2006 and 2018 (N = 2,468,503). By linking tax
+        registries to administrative health registries, we described prevalence rates
+        by age, sex, and parental income rank. Next, we grouped observations into age
+        groups (adolescence, ages 10–20 years; early adulthood, 21–30 years;
+        adulthood, 30–40 years) and applied kinship‐based models with extended
+        families of twins and siblings to decompose the parent–offspring correlation
+        into phenotypic transmission, passive genetic transmission, and passive
+        environmental transmission.
+    - heading: Results
+      text: >-
+        We found that lower parental income rank was associated with higher prevalence
+        of nearly all psychiatric disorders, except for eating disorders, for both men
+        and women at all ages from 10 to 40 years. Comparing the top with the bottom
+        paternal income quartile, the prevalence ratio of any psychiatric disorder was
+        0.47 among 10‐year‐olds and decreased to 0.72 among 40‐year‐olds. The
+        parent–offspring correlation was −.15 in adolescence, −.10 in early adulthood,
+        and −.06 in adulthood. The kinship‐based models indicated that phenotypic
+        transmission could account for 39% of the parent–offspring correlation among
+        adolescents (p < .001), but with no significant contribution in early
+        adulthood (p = .181) or adulthood (p = .737). Passive genetic and
+        environmental transmission contributed to the parent–offspring correlation in
+        all age groups (all p's < .001).
+    - heading: Conclusions
+      text: >-
+        Our findings are consistent with a significant role of social causation during
+        adolescence, while social selection could fully explain the parent–offspring
+        correlation in adulthood.

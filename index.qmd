@@ -40,7 +40,7 @@ and the other place ([@hfsunde](https://twitter.com/hfsunde)).
 ```{r}
 #| results: asis
 source("R/publications.R")
-cat(pub_list_html(selected_publications(read_publications())))
+cat(selected_html(read_selected(), read_publications()))
 ```
 
 [See all publications](publications.qmd){.more-link}

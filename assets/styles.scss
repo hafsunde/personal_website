@@ -229,6 +229,81 @@ h2 {
   font-size: 0.95rem;
 }
 
+// ── Selected papers (home page) ───────────────────────────────────────────────
+// One full-width panel per paper: first page on the left, reference and abstract
+// on the right. Stacks on narrow screens.
+
+.selected-papers {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.selected-paper {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  padding: 1.25rem;
+  border: 1px solid $rule;
+  border-radius: 4px;
+}
+
+// Shrink the link to the image, so the empty space beside it on phones isn't
+// clickable.
+.selected-image {
+  justify-self: start;
+}
+
+.selected-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid $rule;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.selected-body {
+  min-width: 0;
+}
+
+.selected-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.35;
+
+  a {
+    color: inherit;
+  }
+}
+
+.selected-label {
+  margin: 0.9rem 0 0.25rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $muted;
+}
+
+.selected-abstract p {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .selected-paper {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .selected-image img {
+    max-width: 160px;
+  }
+}
+
 // ── CV page ───────────────────────────────────────────────────────────────────
 
 .cv-download {
@@ -319,5 +394,18 @@ body.quarto-dark {
 
   .cv-embed {
     border-color: $rule-dark;
+  }
+
+  .selected-paper,
+  .selected-image img {
+    border-color: $rule-dark;
+  }
+
+  .selected-title a {
+    color: inherit;
+  }
+
+  .selected-label {
+    color: $muted-dark;
   }
 }
