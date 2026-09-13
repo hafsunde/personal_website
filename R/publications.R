@@ -59,9 +59,37 @@ pub_description <- function(pub) {
   paste0('<p class="pub-description">', esc(pub$description), "</p>")
 }
 
+# His authorship role on a paper. Sole first and last authorship are computed
+# from author order; joint roles can't be, so they come from `authorship:`.
+ROLE_LABELS <- c(
+  "first"       = "First author",
+  "last"        = "Last author",
+  "joint-first" = "Joint first author",
+  "joint-last"  = "Joint last author"
+)
+
+pub_role <- function(pub) {
+  if (!is.null(pub$authorship)) {
+    stopifnot(pub$authorship %in% names(ROLE_LABELS))
+    return(pub$authorship)
+  }
+  if (isTRUE(pub$et_al)) return(NULL)
+  a <- unlist(pub$authors)
+  pos <- match(ME, a)
+  if (is.na(pos) || length(a) < 2) return(NULL)
+  if (pos == 1) return("first")
+  if (pos == length(a)) return("last")
+  NULL
+}
+
 pub_html <- function(pub) {
+  role <- pub_role(pub)
+  # Joint roles share the colour of their sole counterpart: pub-first or pub-last.
+  li_class <- if (is.null(role)) "pub" else paste0("pub pub-", sub("^joint-", "", role))
+  label <- if (is.null(role)) "" else paste0('<p class="pub-role">', ROLE_LABELS[[role]], "</p>")
   paste0(
-    '<li class="pub">',
+    '<li class="', li_class, '">',
+    label,
     '<p class="pub-title">', esc(pub$title), "</p>",
     '<p class="pub-meta">', pub_authors(pub), " (", pub$year, "). ",
     "<em>", esc(pub$venue), "</em>.</p>",

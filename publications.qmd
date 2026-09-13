@@ -6,6 +6,8 @@ aliases:
 description-meta: "Peer-reviewed papers and preprints by Hans Fredrik Sunde."
 ---
 
+Papers where I am [first author]{.role-label .role-first} or [last author]{.role-label .role-last} are marked, including joint first and joint last authorship.
+
 ```{r}
 #| results: asis
 source("R/publications.R")

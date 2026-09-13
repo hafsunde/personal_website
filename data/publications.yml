@@ -18,6 +18,8 @@
 #   selected  editorial — featured on the home page
 #   description  editorial — one sentence on what the paper does or finds,
 #             written from the abstract; must not restate the title
+#   authorship  editorial — joint-first | joint-last, set only when Hans Fredrik
+#             confirms it; plain first/last authorship is computed from `authors`
 #   links     editorial — threads and open-access copies; not bibliographic
 
 # -- Preprints -----------------------------------------------------------------
@@ -29,6 +31,7 @@
   year: 2026
   doi: "10.64898/2026.09.01.748516"
   type: preprint
+  authorship: joint-last
   description: "Introduces RAVEL, a model that uses two independent polygenic scores, and shows that once assortative mating is modelled, parents' genotypes explain less than 0.5% as much variance in children's test scores as the child's own genotype, down from 10% in naive trio analyses."
 
 - id: vanbergen2025educational
