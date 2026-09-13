@@ -103,4 +103,4 @@ Domain cutover and retiring Squarespace, tracked in `LONG_TERM_TODO.md`.
 ## Open items
 
 - Whether the CV should stay a PDF link only, or also get an HTML version (see `LONG_TERM_TODO.md`).
-- Redirect for the old `/scientific-papers` URL before DNS moves (see `LONG_TERM_TODO.md`).
+- Whether the old CV URL `/s/HFS_AcadamicCV_june25.pdf` needs to keep working after DNS moves (see `LONG_TERM_TODO.md`).

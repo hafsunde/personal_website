@@ -1,5 +1,8 @@
 ---
 title: "Publications"
+# The Squarespace site served this page at /scientific-papers.
+aliases:
+  - scientific-papers.html
 description-meta: "Peer-reviewed papers and preprints by Hans Fredrik Sunde."
 ---
 

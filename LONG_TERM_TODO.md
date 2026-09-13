@@ -14,7 +14,8 @@ The repo and deploy workflow have the go-ahead. The domain cutover and Squarespa
 - [x] **Add the Pages build.** `.github/workflows/publish.yml` renders with Quarto 1.10.18 plus R (`knitr`, `rmarkdown`, `yaml`) and deploys with GitHub's Pages actions on every push to `main`.
 - [ ] **Enable Pages.** Repo Settings → Pages → Build and deployment → Source: "GitHub Actions". Then re-run the workflow (Actions tab → Publish site → Run workflow) if the first deploy failed because Pages was off.
 - [ ] **Verify at `hafsunde.github.io/personal_website/`.** The Squarespace site stays live and keeps serving the domain throughout. This is the gate before anything DNS-related.
-- [ ] **Keep old URLs working.** The Squarespace papers page is `/scientific-papers`; the new one is `/publications`. Add `aliases: [scientific-papers.html]` to `publications.qmd` before the cutover (tested: Quarto emits a client-side redirect page). `/contact` and `/` already match. `/s/HFS_AcadamicCV_june25.pdf` would need a copy of the PDF at that path if it should keep working.
+- [x] **Keep old URLs working.** The Squarespace papers page is `/scientific-papers`; the new one is `/publications`. `publications.qmd` has `aliases: [scientific-papers.html]`, so Quarto emits a client-side redirect page. `/contact` and `/` already match.
+- [ ] **Old CV URL.** `/s/HFS_AcadamicCV_june25.pdf` 404s after the cutover unless a copy of the PDF sits at that path. Decide whether that link matters.
 - [ ] **Redirect hansfredriksunde.com to GitHub Pages.**
   - Confirm where the domain is actually registered (the Squarespace DNS panel shows this).
   - Apex A records → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
