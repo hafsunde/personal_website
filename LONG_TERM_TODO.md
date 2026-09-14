@@ -43,7 +43,7 @@ To do:
 
 ## Smaller parked items
 
-- [ ] Add blog posts (the listing page is scaffolded and empty; actual posts and any RSS/feed setup are later).
-- [ ] Revisit the design once content is stable.
+- [ ] Blog RSS feed (optional). The first post went up on 2026-09-14; the listing has `feed: false`, so there is no feed yet. See `blog/README.md` for how to write posts.
+- [ ] Revisit the design once content is stable. In particular, consider fonts and colors.
 - [ ] Make the site accessible and reasonably optimised for Google and other search engines.
 - [ ] Add a skill or workflow that checks that the publication list is up to date (new preprints, preprints that have been published, updated details in published papers). Manual for now; could be automated later.
