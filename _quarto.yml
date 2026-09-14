@@ -51,9 +51,10 @@ website:
 
 format:
   html:
+    # Dark is listed first so the site starts in dark mode; the toggle still switches.
     theme:
-      light: [cosmo, assets/styles.scss]
       dark: [darkly, assets/styles.scss]
+      light: [cosmo, assets/styles.scss]
     toc: false
     page-layout: article
     anchor-sections: false
