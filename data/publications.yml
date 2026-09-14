@@ -34,6 +34,15 @@
   authorship: joint-last
   description: "Introduces RAVEL, a model that uses two independent polygenic scores, and shows that once assortative mating is modelled, parents' genotypes explain less than 0.5% as much variance in children's test scores as the child's own genotype, down from 10% in naive trio analyses."
 
+- id: bjorndal2026fgrs
+  authors: ["Bjørndal, L.D.", "Valstad, M.", "Ayorech, Z.", "Eilertsen, E.M.", "van Jole, O.", "Sunde, H.F.", "Grande, T.J.M.", "Torvik, F.A.", "Kendler, K.S.", "Ystrom, E."]
+  title: "Family genetic risk scores for major psychiatric and neurodevelopmental diagnoses in the Norwegian population"
+  venue: "PsyArXiv"
+  year: 2026
+  doi: "10.31234/osf.io/4qtu5_v2"
+  type: preprint
+  description: "Computes family-history-based genetic risk scores for ten diagnoses across 6.2 million Norwegian residents, finding that higher scores predict earlier onset and recurrence, that partners' scores correlate, and that within-family genotype data largely support the method's assumptions."
+
 - id: vanbergen2025educational
   authors: ["van Bergen, E.", "Sunde, H.F.", "Rowland, C.F.", "Melby-Lervåg, M.", "Torvik, F.A."]
   title: "Why educational inequality runs in families: Genetics matter more than environment"
