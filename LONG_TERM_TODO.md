@@ -28,6 +28,8 @@ Decided:
 
 - The PDF is built locally and committed, not built in CI. A workflow check fails the build if the committed PDF doesn't match the source.
 - The CV gets an HTML page that matches the PDF, with a link to download the PDF. The page is generated from the same LaTeX source; if that proves impractical, the fallback is a workflow check that the two match.
+- The LaTeX is written in a Pandoc-readable subset (standard commands plus simple `\newcommand` macros, no CV class such as `moderncv`), so `cv.qmd` can convert it at render time and keep the Quarto header and theme.
+- Fallback if that becomes difficult: make YAML the source instead (like `data/publications.yml`) and generate both the Quarto page and the LaTeX from it. This reverses the "LaTeX is the source" decision, so ask Hans Fredrik before switching.
 
 To do:
 
@@ -43,6 +45,5 @@ To do:
 
 - [ ] Add blog posts (the listing page is scaffolded and empty; actual posts and any RSS/feed setup are later).
 - [ ] Revisit the design once content is stable.
-- [ ] Make dark mode the default.
 - [ ] Make the site accessible and reasonably optimised for Google and other search engines.
 - [ ] Add a skill or workflow that checks that the publication list is up to date (new preprints, preprints that have been published, updated details in published papers). Manual for now; could be automated later.
