@@ -186,6 +186,10 @@ h2 {
   font-weight: 600;
   line-height: 1.4;
   margin: 0 0 0.3rem;
+
+  a {
+    color: inherit;
+  }
 }
 
 .pub-meta {
@@ -401,7 +405,8 @@ body.quarto-dark {
     border-color: $rule-dark;
   }
 
-  .selected-title a {
+  .selected-title a,
+  .pub-title a {
     color: inherit;
   }
 

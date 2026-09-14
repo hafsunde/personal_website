@@ -90,7 +90,7 @@ pub_html <- function(pub) {
   paste0(
     '<li class="', li_class, '">',
     label,
-    '<p class="pub-title">', esc(pub$title), "</p>",
+    '<p class="pub-title"><a href="https://doi.org/', pub$doi, '">', esc(pub$title), "</a></p>",
     '<p class="pub-meta">', pub_authors(pub), " (", pub$year, "). ",
     "<em>", esc(pub$venue), "</em>.</p>",
     pub_description(pub),
