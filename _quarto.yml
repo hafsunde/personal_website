@@ -6,6 +6,7 @@ project:
   render:
     - "*.qmd"
     - "blog/*.qmd"
+    - "blog/posts/*.qmd"
   resources:
     - assets/cv.pdf
     - assets/selected/*.jpg

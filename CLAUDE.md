@@ -87,7 +87,7 @@ Some publishers (Wiley, PNAS) return 403 to scripted HTML requests. Check DOIs w
 - `_site/` and `.quarto/` are build output — gitignored, never committed.
 - Assets (headshot, CV PDF, SCSS, selected-paper first pages) live in `assets/`.
 - Styling goes in `assets/styles.scss` as theme variables and rules, not inline HTML or per-page CSS blocks. The same file feeds both the light (cosmo) and dark (darkly) themes; dark overrides sit under `body.quarto-dark`.
-- `_quarto.yml` has an explicit `render:` list so `CLAUDE.md` and `LONG_TERM_TODO.md` at the repo root stay out of the site. New top-level pages must match it (`*.qmd`, `blog/*.qmd`).
-- The blog under `blog/` is a scaffolded listing page with no posts yet. Leave it empty unless asked. The render warning that the listing matches no files is expected until the first post.
+- `_quarto.yml` has an explicit `render:` list so `CLAUDE.md` and `LONG_TERM_TODO.md` at the repo root stay out of the site. New pages must match it (`*.qmd`, `blog/*.qmd`, `blog/posts/*.qmd`).
+- Blog posts are `blog/posts/<slug>.qmd` with front matter `title`, `date` and `description` (the listing on `blog/index.qmd` shows all three). Put the title in front matter, not as a `#` heading. Unfinished posts carry `draft: true`, which keeps them out of the published site. Don't write or edit post prose unless asked; posts are Hans Fredrik's voice.
 - Prose on the site is Hans Fredrik's own voice — port existing text as-is rather than rewriting it, and flag anything that reads as stale instead of silently updating it.
 - The contact page keeps pointing at the FHI employee page; no email address on the site.

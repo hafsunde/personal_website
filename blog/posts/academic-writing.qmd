@@ -1,0 +1,140 @@
+---
+title: "Academic writing doesn't have to be hard to read"
+date: 2026-09-14
+description: "Seven habits that make academic prose easier to read."
+---
+
+*NB: This document is a work in progress.*
+
+Nobody sets out to write a sentence that others cannot read. Yet academic papers are full
+of them, and their writers rarely notice. A writer never reads their own sentences cold:
+they already know what each one means. The reader does not, and has to rebuild the
+thought from the words on the page.
+
+Students pick up the habits honestly. They read papers written this way, mistake
+difficulty for the voice of scholarship, and copy it. The habits that make prose hard to
+read are specific, though, and so are the fixes. Here are seven.
+
+## Omit needless words
+
+*Due to the fact that* is *because*. *In order to* is *to*. *It is important to note
+that X* is *X*. Delete the phrase and read the sentence again: if nothing is lost,
+nothing was there.
+
+Apply the test upwards. A sentence that restates the one before it, a paragraph whose
+conclusion you drew two pages ago, a section that does not advance the argument: cut them
+rather than polish them. 
+
+## Start where the reader is
+
+Every sentence has two strong positions. The opening is read as *what this is about*, the
+close as *the point*. Old information belongs at the opening — usually whatever the last
+sentence ended on — and new information at the close, where it becomes the opening of the
+next.
+
+Broken: *Children's education resembles their parents' education. People tend to choose
+partners with a similar level of education. Advantage and disadvantage become
+concentrated in the same families.*
+
+Repaired: *Children's education resembles their parents' education. Those parents also
+resemble each other, because people tend to choose partners with a similar level of
+education. That similarity between partners concentrates advantage and disadvantage in
+the same families.*
+
+The facts are the same. In the second version each sentence begins on the term the last
+one ended with, so the reader is never left holding a sentence in suspense, waiting to
+find out what it has to do with anything.
+
+## Name the actor
+
+In the active voice the subject does the thing — *the reviewer rejected the paper* — and
+in the passive it has the thing done to it: *the paper was rejected*. The passive hides
+who did what. *Mistakes were made* names nobody. *The sample was
+collected* leaves the reader asking by whom. Write
+*we collected the sample*.
+
+The passive has one defence: it lets a sentence open on old information when the actor is
+new. If the previous sentence ended on a questionnaire, *the questionnaire was developed
+by a team of clinicians* keeps the reader where they already are. That is the only
+reason to use it. Chosen for variety, or from a sense that impersonality sounds
+scientific, the passive voice costs clarity and readability.
+
+## Use verbs, not nouns
+
+A nominalisation is a verb turned into a noun: *analysis* from *analyse*, *measurement*
+from *measure*, *introduction* from *introduce*.
+
+A sentence is easiest to read when the subject is the actor and the verb is the action.
+Nominalisation moves the
+action into the subject, and leaves a weak verb behind — *conduct*, *perform*, *carry
+out*. Nominalisations are a key reason why academic writing is so hard to read.
+
+So *we performed an analysis of the data* becomes *we analysed the data*. *There was a
+reduction in the prevalence of depression following the introduction of the programme*
+becomes *depression became less common after we introduced the programme*. 
+Avoiding nominalisations also reduces the number of words, which is always a good thing.
+
+## Repeat yourself deliberately
+
+Call the same thing a *sample* in one paragraph, a *cohort* in the
+next and a *group* in the third, and the reader must decide whether you mean one thing or
+three. Some will decide wrongly. Fix a term at first use and keep it. Repetition tells
+the reader that the referent has not changed.
+
+Repeated structure does the same for comparisons. *The first
+group received the drug; the second group received the placebo.* Everything but the
+contrast is held constant, so attention falls on the one element that differs. Build the
+items of a list to a single grammatical pattern and the reader learns the shape once
+and spends the rest of their attention on the content.
+Break the pattern and the differences you did not intend compete with the one you did.
+
+Repeat words and structure, not points. A point made twice is still a sentence to cut.
+
+## Formality is not obscurity
+
+Being scientific means being honest, and honesty means writing so that a reader can
+check you. A claim that is hard to understand is hard to disagree
+with. First person, ordinary vocabulary, short
+sentences and the active voice are all compatible with serious scholarship. Use the long
+word when it is the exact one, and not otherwise.
+
+## Writing is rewriting
+
+A first draft is rarely a good draft. A first draft is for working out what you think;
+the habits above apply to the second, the third and the fourth, and a plain sentence is
+usually the fourth version of itself. 
+
+The rest is practice, and practice means reading with attention. When a paragraph of
+someone else's is easy to follow, stop and work out what makes it so; when you lose the
+thread, work out why. The diagnosis is what you keep —
+noticing that a paragraph works teaches you nothing until you can say why it works. Then
+do the same to your own drafts, which is harder, because you already know what you meant.
+
+## A full example
+
+**Broken:** *Due to the fact that the quality of student writing is of considerable
+importance, an investigation of the effects of feedback was undertaken by our research
+group. A total of 120 participants were recruited. Random allocation of the respondents
+to two conditions was then performed. Detailed comments were given to the first cohort,
+whereas only a grade was received by the other set of students. An improvement in the
+revision quality of the first group was observed, in contrast to the second group, where
+no such improvement was found. It should be noted that the finding that feedback improves
+revision is an important one.*
+
+**Repaired:** *Feedback is meant to improve how students revise, but it is not clear what
+kind of feedback does. We recruited 120 students and assigned them at random to two
+groups. The first group received detailed comments; the second group received only a
+grade. When the students revised their work, only the first group improved.*
+
+The repair names the researchers ("we"), puts the action back in the verbs, calls the students
+one thing throughout, gives the two groups the same sentence shape, and ends on the
+result instead of on a claim that the result matters. None of these changes set out to
+make it shorter, yet the repair runs to 54 words against the original's 104.
+
+## Further reading
+
+- Steven Pinker, *The Sense of Style: The Thinking Person's Guide to Writing in the 21st
+  Century* (2014).
+- Steven Pinker, [Linguistics, Style and Writing in the 21st
+  Century](https://www.youtube.com/watch?v=OV5J6BfToSw), a talk at the Royal Institution
+  (2015).
