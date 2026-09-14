@@ -1,6 +1,6 @@
 # personal_website
 
-Source for Hans Fredrik Sunde's academic site, replacing a Squarespace site currently served at hansfredriksunde.com.
+Source for Hans Fredrik Sunde's academic site, served at hansfredriksunde.com. It replaced a Squarespace site.
 
 Parked and upcoming work is in `LONG_TERM_TODO.md` — read it before starting work.
 
@@ -14,12 +14,13 @@ Rendering happens in `.github/workflows/publish.yml` on every push to `main`, so
 
 Pushing to `main` publishes the site within a couple of minutes. Treat a push as publishing: don't push unless asked.
 
-The domain cutover and Squarespace retirement are **frozen** and require an explicit go-ahead from Hans Fredrik. Without one, do not:
+The domain is registered at Squarespace Domains, which also hosts its DNS. It points at GitHub Pages, and the custom domain is set in the repo's Pages settings (deploys use GitHub Actions, so there is no `CNAME` file and none is needed). Without an explicit go-ahead from Hans Fredrik, do not:
 
-- change DNS, add a `CNAME` file, set a custom domain, or touch anything at the registrar
-- cancel or modify the Squarespace site
+- change DNS records or nameservers, change the Pages custom domain, or touch anything at the registrar
+- remove the `_github-pages-challenge-hafsunde` TXT record, which keeps the domain verified to his GitHub account
+- cancel or modify anything at Squarespace
 
-The new site has been reviewed at `hafsunde.github.io/personal_website/`. Squarespace keeps serving the domain until the cutover gets its go-ahead.
+The Squarespace DNS panel says "You're using custom nameservers" and that its records are inactive. That is misleading: the domain is delegated to Squarespace's own NS1-backed nameservers, and the records in the panel are live. Don't switch nameservers because of it.
 
 ## Publications
 
@@ -90,9 +91,3 @@ Some publishers (Wiley, PNAS) return 403 to scripted HTML requests. Check DOIs w
 - The blog under `blog/` is a scaffolded listing page with no posts yet. Leave it empty unless asked. The render warning that the listing matches no files is expected until the first post.
 - Prose on the site is Hans Fredrik's own voice — port existing text as-is rather than rewriting it, and flag anything that reads as stale instead of silently updating it.
 - The contact page keeps pointing at the FHI employee page; no email address on the site.
-
-## Open questions
-
-Don't guess at these; ask.
-
-- Whether the CV, which will be built from LaTeX in this repo, also gets an HTML page (see `LONG_TERM_TODO.md`).
