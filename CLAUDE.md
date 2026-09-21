@@ -8,7 +8,7 @@ Parked and upcoming work is in `LONG_TERM_TODO.md` — read it before starting w
 
 Quarto static site on GitHub Pages. The repo is public at `github.com/hafsunde/personal_website` (a project repo, remote `origin`).
 
-Rendering happens in `.github/workflows/publish.yml` on every push to `main`, so a local Quarto install is for `quarto preview` only, not a publishing dependency. Pages use the knitr engine: `R/publications.R` generates the publication lists, so the build needs R with `knitr`, `rmarkdown` and `yaml`. Quarto is pinned to 1.10.18 in the workflow; bump it there and locally together.
+The site is **built locally and committed**. Run `quarto render` before pushing to generate `_site/`; the workflow deploys the pre-built site without re-rendering. Pages use the knitr engine: `R/publications.R` generates the publication lists, so the build needs R with `knitr`, `rmarkdown` and `yaml`. Quarto is pinned to 1.10.18; keep it in sync locally and in `.github/workflows/publish.yml` when upgrading.
 
 ## Hard rules
 
