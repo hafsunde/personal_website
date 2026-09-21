@@ -1,5 +1,4 @@
-# Quarto build output
-_site/
+# Quarto build output (committed for deployment, not rebuilt in CI)
 .quarto/
 
 # R
