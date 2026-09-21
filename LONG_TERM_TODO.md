@@ -37,10 +37,11 @@ To do:
 - [x] **Rebuild the CV in LaTeX**, reproducing the content of the current `assets/cv.pdf`. Source: `cv/cv.tex`; local build and maintenance instructions: `cv/README.md`. UiO researcher position ends March 2026; newer talks remain to be added manually.
 - [x] **Generate its publications section from `data/publications.yml`** rather than maintaining the list twice.
 - [x] **Generate the HTML CV page** from the same source, replacing the current `cv.qmd`, with a download link to the PDF.
-- [x] **Add the workflow check** that the committed PDF (and, if needed, the HTML page) matches the source. Source/PDF fingerprints in `cv/build.json` are checked without compiling LaTeX in CI.
-- [ ] **Keep the current `assets/cv.pdf` as a fallback** until the generated PDF and page look right side by side.
+- [x] **Add the workflow check** that the committed PDF matches the source. Source/PDF fingerprints in `cv/build.json` are verified before deployment (the site is built locally and committed, not rebuilt in CI).
+- [x] **Keep the current `assets/cv.pdf` as a fallback** until the generated PDF and page look right side by side.
+- [x] **Switch to local builds:** the entire site (including CV HTML and all pages) is built locally with `quarto render` and committed; the workflow only verifies and deploys.
 
-The original PDF is retained locally at `tmp/pdfs/cv-original.pdf` and in Git history. The new PDF has been visually reviewed; the HTML renders successfully, but a browser visual review is still pending.
+The original PDF is retained locally at `tmp/pdfs/cv-original.pdf` and in Git history. The new PDF and HTML CV page are visually approved and deployed as of 2026-09-21.
 
 ---
 
