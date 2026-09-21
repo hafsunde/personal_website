@@ -90,4 +90,4 @@ Some publishers (Wiley, PNAS) return 403 to scripted HTML requests. Check DOIs w
 - `_quarto.yml` has an explicit `render:` list so `CLAUDE.md` and `LONG_TERM_TODO.md` at the repo root stay out of the site. New pages must match it (`*.qmd`, `blog/*.qmd`, `blog/posts/*.qmd`).
 - Blog posts are `blog/posts/<slug>.qmd` with front matter `title`, `date` and `description` (the listing on `blog/index.qmd` shows all three). Put the title in front matter, not as a `#` heading. Unfinished posts carry `draft: true`, which keeps them out of the published site. Don't write or edit post prose unless asked; posts are Hans Fredrik's voice.
 - Prose on the site is Hans Fredrik's own voice — port existing text as-is rather than rewriting it, and flag anything that reads as stale instead of silently updating it.
-- The contact page keeps pointing at the FHI employee page; no email address on the site.
+- The contact page keeps pointing at the FHI employee page; no email address on the site except in the CV. Hans Fredrik explicitly approved including his email address and phone number in both the PDF and HTML CV.

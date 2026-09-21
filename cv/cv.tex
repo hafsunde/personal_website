@@ -1,0 +1,237 @@
+% !TeX program = lualatex
+% Canonical CV content. Edit this file to add positions, talks, or teaching.
+% The generated publications block is refreshed from data/publications.yml.
+% Run python scripts/cv.py build from the repository root after editing.
+% This file also compiles directly with lualatex, with the last generated list.
+\documentclass[10pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{Segoe UI}
+\newfontfamily\cvheadingfont{Palatino Linotype}
+\usepackage[margin=20mm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+% Draw underlines in the page content, so they also survive printing and
+% viewers that ignore PDF link borders. Keep these styling hooks out of Pandoc.
+\AtBeginDocument{%
+  \raggedright
+  \let\cvlarge\LARGE
+  \renewcommand{\LARGE}{\cvlarge\cvheadingfont}%
+  \let\cvhref\href
+  \renewcommand{\href}[2]{\cvhref{#1}{\underline{#2}}}%
+  \renewcommand{\url}[1]{\href{#1}{\nolinkurl{#1}}}%
+}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlist[itemize]{leftmargin=1.3em,itemsep=2pt,parsep=0pt,topsep=3pt}
+\titleformat{\section}{\cvheadingfont\fontsize{16}{19}\selectfont\bfseries}{}{0pt}{}[\titlerule]
+\titleformat{\subsection}{\cvheadingfont\fontsize{13}{16}\selectfont\bfseries}{}{0pt}{}
+\titleformat{\subsubsection}{\fontsize{10}{13}\selectfont\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{15pt}{7pt}
+\titlespacing*{\subsection}{0pt}{10pt}{4pt}
+\titlespacing*{\subsubsection}{0pt}{8pt}{3pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Hans Fredrik Sunde}
+\fancyhead[R]{\small Curriculum vitae}
+\fancyfoot[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{14pt}
+\emergencystretch=2em
+\clubpenalty=10000
+\widowpenalty=10000
+% Suppress volatile PDF metadata so repeat builds on the same toolchain match.
+\pdfvariable suppressoptionalinfo=767
+\hypersetup{pdftitle={Hans Fredrik Sunde - Curriculum vitae},pdfauthor={Hans Fredrik Sunde}}
+
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+{\LARGE\textbf{Hans Fredrik Sunde, PhD}}\\[4pt]
+Postdoctoral researcher\\[3pt]
+\url{https://orcid.org/0000-0001-8797-5422}\\[3pt]
+Oslo, Norway | \href{mailto:hafsunde@gmail.com}{hafsunde@gmail.com} |
+\href{https://www.hansfredriksunde.com}{www.hansfredriksunde.com} | +47 995 88 824
+\end{center}
+
+Publications updated 21 September 2026. Professional activities and teaching listed through June 2025.
+
+\section*{Education}
+\begin{itemize}
+\item \textbf{PhD in Psychology}, University of Oslo, Oslo, Norway, 2024.
+  \begin{itemize}
+  \item Sunde, H. F. (2024). \textit{Reproduction of socioeconomic differences and mental health across generations} [Doctoral dissertation, University of Oslo]. Oslo, Norway. \url{http://hdl.handle.net/10852/110758}
+  \item Main Supervisor: Dr. Fartein Ask Torvik.
+  \item Co-Supervisor: Dr. Espen Moen Eilertsen.
+  \end{itemize}
+\item \textbf{MSc in Psychology}, Norwegian University of Science and Technology, Trondheim, Norway, 2019.
+  \begin{itemize}
+  \item Supervisor: Dr. Robert Biegler.
+  \end{itemize}
+\item \textbf{BSc in Psychology}, Norwegian University of Science and Technology, Trondheim, Norway, 2017.
+\end{itemize}
+
+\section*{Positions Held}
+\begin{itemize}
+\item \textbf{03.2025 -- 03.2026:} Researcher (20\%), Department of Psychology, University of Oslo, Oslo, Norway.
+\item \textbf{10.2023 -- present:} Postdoctoral Researcher, Centre for Fertility and Health, Norwegian Institute of Public Health, Oslo, Norway.
+\item \textbf{05.2023 -- 06.2023:} Researcher, Department of Special Needs Education, University of Oslo, Oslo, Norway.
+\item \textbf{08.2020 -- 09.2023:} Doctoral Researcher, Centre for Fertility and Health, Norwegian Institute of Public Health, Oslo, Norway.
+\item \textbf{06.2019 -- 06.2020:} Research Assistant, Department of Psychology, Norwegian University of Science and Technology, Trondheim, Norway.
+\end{itemize}
+
+\section*{Awards}
+\begin{itemize}
+\item \textbf{2024:} Outstanding Associate Member Poster Presentation Award, Behavior Genetics Association.
+\item \textbf{2023:} Outstanding Associate Member Oral Presentation Award, Behavior Genetics Association.
+\end{itemize}
+
+\newpage
+\section*{Publications}
+% BEGIN GENERATED PUBLICATIONS
+\subsection*{First- and last-author publications}
+\subsubsection*{Preprints}
+\begin{itemize}
+\item Malawsky, D.S., Hegemann, L., Wootton, O., Havdahl, A.K., \textbf{Sunde, H.F.}, \& Martin, H.C. (2026). Phantom genetic nurture: assortative mating accounts for most of the apparent association between parental genotypes and childhood cognitive performance. \textit{bioRxiv}. [Preprint]. \url{https://doi.org/10.64898/2026.09.01.748516} \textit{Joint last author.}
+\end{itemize}
+\subsubsection*{Journal articles}
+\begin{itemize}
+\item \textbf{Sunde, H.F.}, \& Dierker, P. (2026). Are Spouses Similar in Divorce? Investigating Spousal Similarity in Couple-Shared Outcomes. \textit{Twin Research and Human Genetics}. \url{https://doi.org/10.1017/thg.2026.10050}
+\item \textbf{Sunde, H.F.}, Eilertsen, E.M., Kinge, J.M., Kleppestø, T.H., Nordmo, M., Caspi, A., Moffitt, T.E., \& Torvik, F.A. (2026). Parental income and psychiatric disorders from age 10 to 40: a genetically informative population study. \textit{Journal of Child Psychology and Psychiatry}. \url{https://doi.org/10.1111/jcpp.70022}
+\item \textbf{Sunde, H.F.}, Eilertsen, E.M., \& Torvik, F.A. (2025). Understanding indirect assortative mating and its intergenerational consequences for educational attainment. \textit{Nature Communications}. \url{https://doi.org/10.1038/s41467-025-60483-0}
+\item Skirbekk, V., Blekesaune, M., \& \textbf{Sunde, H.F.} (2025). Personality and fertility dynamics in Norway across four decades -- Findings from the HUNT survey. \textit{Personality and Individual Differences}. \url{https://doi.org/10.1016/j.paid.2024.112862}
+\item \textbf{Sunde, H.F.}, Eftedal, N.H., Cheesman, R., Corfield, E.C., Kleppestø, T.H., Seierstad, A.C., Ystrom, E., Eilertsen, E.M., \& Torvik, F.A. (2024). Genetic similarity between relatives provides evidence on the presence and history of assortative mating. \textit{Nature Communications}. \url{https://doi.org/10.1038/s41467-024-46939-9}
+\item \textbf{Sunde, H.F.}, Kleppestø, T.H., Gustavson, K., Nordmo, M., Reme, B.-A., \& Torvik, F.A. (2022). The ADHD deficit in school performance across sex and parental education: A prospective sibling-comparison register study of 344,152 Norwegian adolescents. \textit{JCPP Advances}. \url{https://doi.org/10.1002/jcv2.12064}
+\end{itemize}
+\subsection*{Other co-authored publications}
+\subsubsection*{Preprints}
+\begin{itemize}
+\item Bjørndal, L.D., Valstad, M., Ayorech, Z., Eilertsen, E.M., van Jole, O., \textbf{Sunde, H.F.}, Grande, T.J.M., Torvik, F.A., Kendler, K.S., \& Ystrom, E. (2026). Family genetic risk scores for major psychiatric and neurodevelopmental diagnoses in the Norwegian population. \textit{PsyArXiv}. [Preprint]. \url{https://doi.org/10.31234/osf.io/4qtu5_v2}
+\item van Bergen, E., \textbf{Sunde, H.F.}, Rowland, C.F., Melby-Lervåg, M., \& Torvik, F.A. (2025). Why educational inequality runs in families: Genetics matter more than environment. \textit{PsyArXiv}. [Preprint]. \url{https://doi.org/10.31234/osf.io/rehdj_v1}
+\end{itemize}
+\subsubsection*{Journal articles}
+\begin{itemize}
+\item Aczel, B., et al. (2026). Investigating the analytical robustness of the social and behavioural sciences. \textit{Nature}. \url{https://doi.org/10.1038/s41586-025-09844-9}
+\item Andersen, M.L., \textbf{Sunde, H.F.}, Hart, R.K., \& Torvik, F.A. (2026). Parenthood and mental health throughout the life course: A total population study. \textit{Social Psychiatry and Psychiatric Epidemiology}. \url{https://doi.org/10.1007/s00127-026-03091-7}
+\item Andersen, M.L., Hart, R.K., \textbf{Sunde, H.F.}, Davies, N.M., \& Torvik, F.A. (2026). The cost of caring: Gendered health and labor market effects of grandparenthood. \textit{Proceedings of the National Academy of Sciences}. \url{https://doi.org/10.1073/pnas.2535409123}
+\item Reme, B.-A., \textbf{Sunde, H.F.}, Torvik, F.A., Kinge, J.M., Strand, B.H., \& Wörn, J. (2026). Parental income in childhood and health outcomes across age groups: a register-based study from Norway. \textit{BMC Medicine}. \url{https://doi.org/10.1186/s12916-026-04735-w}
+\item Landmark, L., \textbf{Sunde, H.F.}, Fors, E.A., Kennair, L.E.O., \& Reme, S.E. (2026). Prevalence of Bodily Distress Syndrome and Prediction of Patient Outcomes: Cohort Study of 3762 Individuals With Persistent Pain. \textit{European Journal of Pain}. \url{https://doi.org/10.1002/ejp.70212}
+\item Eilertsen, E.M., Eftedal, N.H., Cheesman, R., Ayorech, Z., Ebeltoft, J.C., \textbf{Sunde, H.F.}, Tandberg, A.D., Torvik, F.A., \& Ystrom, E. (2026). Multivariate maternal effects across the internalizing--externalizing spectrum in childhood: results from the Norwegian mother, father, and child cohort study. \textit{Journal of Child Psychology and Psychiatry}. \url{https://doi.org/10.1111/jcpp.70111}
+\item Kleppestø, T.H., Bendixen, M., \textbf{Sunde, H.F.}, Zietsch, B., Harper, K.T., Karlsen, H., Stavang, M., Eftedal, N.H., \& Kennair, L.E.O. (2026). The attractive personality: Like me, but better. \textit{Evolution and Human Behavior}. \url{https://doi.org/10.1016/j.evolhumbehav.2025.106811}
+\item Nordmo, M., \textbf{Sunde, H.F.}, Kleppestø, T.H., Nordmo, M., Caspi, A., Moffitt, T.E., \& Torvik, F.A. (2025). Cognitive Abilities and Educational Attainment as Antecedents of Mental Disorders: A Total Population Study of Males. \textit{Psychological Science}. \url{https://doi.org/10.1177/09567976251347221}
+\item Eftedal, N.H., Eilertsen, E.M., \textbf{Sunde, H.F.}, Kleppestø, T.H., Ystrom, E., \& Czajkowski, N.O. (2025). Beyond additive genetic effects: Explaining family resemblance in school performance across millions of pairs of Norwegian relatives. \textit{Proceedings of the National Academy of Sciences}. \url{https://doi.org/10.1073/pnas.2419627122}
+\item Torvik, F.A., \textbf{Sunde, H.F.}, Cheesman, R., Eftedal, N.H., Keller, M.C., Ystrom, E., \& Eilertsen, E.M. (2024). Non-random mating patterns within and across education and mental and somatic health. \textit{Nature Communications}. \url{https://doi.org/10.1038/s41467-024-54966-9}
+\item Caspi, A., Houts, R.M., Moffitt, T.E., Richmond-Rakerd, L.S., Hanna, M.R., \textbf{Sunde, H.F.}, \& Torvik, F.A. (2024). A nationwide analysis of 350 million patient encounters reveals a high volume of mental-health conditions in primary care. \textit{Nature Mental Health}. \url{https://doi.org/10.1038/s44220-024-00310-5}
+\item Nordmo, M., Kleppestø, T.H., Reme, B.-A., \textbf{Sunde, H.F.}, von Soest, T., \& Torvik, F.A. (2024). The diminishing association between adolescent mental disorders and educational performance from 2006--2019. \textit{JCPP Advances}. \url{https://doi.org/10.1002/jcv2.12239}
+\item Landmark, L., \textbf{Sunde, H.F.}, Fors, E.A., Kennair, L.E.O., Sayadian, A., Backelin, C., \& Reme, S.E. (2024). Associations between pain intensity, psychosocial factors, and pain-related disability in 4285 patients with chronic pain. \textit{Scientific Reports}. \url{https://doi.org/10.1038/s41598-024-64059-8}
+\item Kleppestø, T.H., Eilertsen, E.M., van Bergen, E., \textbf{Sunde, H.F.}, Zietsch, B., Nordmo, M., Eftedal, N.H., Havdahl, A., Ystrom, E., \& Torvik, F.A. (2024). Intergenerational transmission of ADHD behaviors: genetic and environmental pathways. \textit{Psychological Medicine}. \url{https://doi.org/10.1017/S003329172300315X}
+\item Nordmo, M., Kleppestø, T.H., \textbf{Sunde, H.F.}, Flatø, M., Demange, P., \& Torvik, F.A. (2023). The association between parental internalizing disorders and child school performance. \textit{npj Science of Learning}. \url{https://doi.org/10.1038/s41539-023-00182-x}
+\item Lisøy, R.S., Pfuhl, G., \textbf{Sunde, H.F.}, \& Biegler, R. (2022). Sweet spot in music---Is predictability preferred among persons with psychotic-like experiences or autistic traits? \textit{PLOS ONE}. \url{https://doi.org/10.1371/journal.pone.0275308}
+\end{itemize}
+% END GENERATED PUBLICATIONS
+
+\section*{Professional activities}
+\subsection*{Research Stays}
+\begin{itemize}
+\item \textbf{September -- November 2024:} Complex Trait Genetics Lab, Center for Neurogenomics and Cognitive Research, VU Amsterdam (Host: Prof. Dr. Dorret Boomsma).
+\end{itemize}
+
+\subsection*{Workshops}
+\begin{itemize}
+\item International Statistical Genetics Workshop 2024 (Boulder, CO).
+\item VU Amsterdam Summer School 2022: Nature and Nurture: Twin Research and Human Genetics.
+\item International Statistical Genetics Workshop 2021 (Online).
+\end{itemize}
+
+\subsection*{Conference presentations}
+\begin{itemize}
+\item Sunde, H.F., (2025) Combining genetic and phenotypic data in extended families to investigate indirect assortative mating and gene-environment correlations. Behavior Genetics Association Annual Meeting (Atlanta 2025). Oral presentation.
+\item Sunde, H.F., (2025) Understanding indirect assortative mating and its intergenerational consequences. European Social Science Genetics Network (Bristol 2025). Oral presentation.
+\item Sunde, H.F., (2024) Rethinking partner similarity: Understanding indirect assortative mating and its consequences for educational attainment. Behavior Genetics Association Annual Meeting (London 2024). Poster presentation.
+\item Sunde, H.F., (2024) Rethinking indirect assortative mating. International Statistical Genetics Workshop (Boulder, CO 2024). Poster presentation.
+\item Sunde, H.F., (2024) Genetic similarity between relatives provides evidence on the presence and history of assortative mating. Human Behavior and Evolution Society (Aarhus 2024). Oral presentation.
+\item Sunde, H.F., (2023) Assortative mating increases genetic similarity among distant relatives: Evidence from polygenic scores. Behavior Genetics Association Annual Meeting (Murcia 2023). Oral presentation.
+\item Sunde, H.F., (2023) Parental income and mental disorders from age 10 to 35: a genetically informative population study. Norwegian Social and Community Psychology Conference (Trondheim 2023). Oral presentation.
+\item Sunde, H.F., (2022) Skoleforløp blant barn med ADHD. En prospektiv register-og søskenstudie av norske tenåringer. ADHD Forskningsnetverk NevSom (Trondheim 2022). Oral presentation.
+\end{itemize}
+
+\subsection*{Invited talks}
+\subsubsection*{2025}
+\begin{itemize}
+\item \textbf{19/05/2025:} Phenome-wide analysis of half siblings suggests maternal effects on adult health are common. BIOSFER Scientific Seminars (Online).
+\item \textbf{15/05/2025:} Phenome-wide analysis of half siblings suggests maternal effects on adult health are common. 8th Annual CeFH Symposium (Oslo).
+\item \textbf{28/01/2025:} How to give better presentations: tips, tricks, and some guiding principles. CeFH Internal Seminar (Norefjell).
+\item \textbf{17/01/2025:} The theory crisis. CeFH Friday Seminar (Oslo).
+\end{itemize}
+
+\subsubsection*{2024}
+\begin{itemize}
+\item \textbf{09/12/2024:} Å forstå indirekte assortativ pardannelse og dets intergenerasjonalle konsekvenser, Lab Meeting, Sexual Conflict Research Group (Oslo).
+\item \textbf{09/12/2024:} Parental income and mental disorders from age 10 to 40, TTiT Lab Meeting (Trondheim).
+\item \textbf{20/11/2024:} Partnerlikhet og sosial ulikhet, REMENTA Sluttesminar (Oslo).
+\item \textbf{18/11/2024:} Understanding indirect assortative mating and its intergenerational consequences. FlaDD Lab Meeting (Nijmegen).
+\item \textbf{07/11/2024:} Understanding indirect assortative mating and its intergenerational consequences. GENE Amsterdam Research Meeting (Amsterdam).
+\item \textbf{24/09/2024:} Parental income and mental disorders from age 10 to 40: a genetically informative population study. BioPsy colloquium (Amsterdam).
+\item \textbf{11/09/2024:} Understanding indirect assortative mating and its intergenerational consequences. CNCR Seminar (Amsterdam).
+\item \textbf{29/08/2024:} Assortative mating: Genetics and partner selection. Genetics and Social Sciences Conference (Oslo).
+\item \textbf{14/06/2024:} ADHD og skoleprestasjoner. ADHD Norge fagråd (Oslo).
+\item \textbf{29/05/2024:} Understanding indirect assortative mating and its intergenerational consequences. BIOSFER workshop (Sandbjerg).
+\item \textbf{15/05/2024:} Understanding indirect assortative mating and its intergenerational consequences. 7th Annual CeFH Symposium (Oslo).
+\item \textbf{16/02/2024:} Genetic similarity between relatives provides evidence on the presence and history of assortative mating. PsychGen Friday Seminar (Oslo).
+\end{itemize}
+
+\subsubsection*{2023}
+\begin{itemize}
+\item \textbf{06/12/2023:} Genetic similarity between relatives provides evidence on the presence and history of assortative mating. Social Science Genetics Seminar (Online).
+\item \textbf{01/12/2023:} Genetic similarity between relatives provides evidence on the presence and history of assortative mating. CeFH Genetics Friday (Oslo).
+\item \textbf{21/09/2023:} Genetic similarity between relatives provides evidence on the presence and history of assortative mating. BIOSFER workshop (Rostock).
+\item \textbf{12/05/2023:} ADHD and school performance. SpedAims Fagprat på Fredag (Oslo).
+\item \textbf{05/05/2023:} Assortative mating strongly increases genetic similarity between distant relatives. CeFH Genetics Friday (Oslo).
+\item \textbf{09/03/2023:} Kjønn, ADHD, og skoleprestasjoner. Health Gap Sluttseminar, Litteraturhuset (Oslo).
+\item \textbf{02/03/2023:} Correlation does not imply causation, even for genetics\ldots . FHI Fagforum (Oslo).
+\item \textbf{15/05/2023:} Assortative mating strongly increases genetic similarity between distant relatives. 6th Annual CeFH Symposium (Oslo).
+\end{itemize}
+
+\subsubsection*{2022}
+\begin{itemize}
+\item \textbf{18/11/2022:} Parental income and mental disorders: Using children-of-twins to distinguish genetic and social transmission. CeFH Genetics Friday (Oslo).
+\item \textbf{09/10/2022:} ADHD og karakterer i ungdomsskolen. ADHD Norge: Lærerkonferansen 2022 (Bergen).
+\item \textbf{27/09/2022:} ADHD and school performance across sex, parental education, and school subjects. ACAMH Around the Campfire (Online).
+\item \textbf{04/05/2022:} Mendelian Randomization: Symphony Orchestra or School Band? -- Demonstrating breach of assumptions in IV analysis with simulations. CeFH Instrumental variable \& Mendelian Randomization seminars (Oslo).
+\item \textbf{26/04/2022:} The Theory Crisis. Research Seminar: Personality, Genetics, and Mental Health (Oslo).
+\item \textbf{08/04/2022:} ADHD and school performance across sex, parental education, and school subjects. CeFH Friday Seminar (Oslo).
+\end{itemize}
+
+\subsubsection*{2021}
+\begin{itemize}
+\item \textbf{16/12/2021:} Demonstrating common pitfalls with statistical control. PhD Network at NIPH Seminar (Oslo).
+\item \textbf{19/11/2021:} What is up with statistical control: When to use, when not to use, and when it's not enough. CeFH Friday Seminar (Oslo).
+\item \textbf{29/09/2021:} Are highly educated parents good for your mental health?. 4th Annual CeFH Symposium (Oslo).
+\end{itemize}
+
+\subsection*{Other activities}
+Co-organised the 2025 Oslo Conference on Social Science and Genetics (15th and 16th of June 2025).
+
+\section*{Teaching Experience}
+\subsection*{External Examiner / Grader, miscellaneous clients}
+
+\subsection*{Miscellaneous lectures}
+Norwegian University of Science and Technology, Trondheim, Norway, 2020 -- 2021.
+\begin{itemize}
+\item Introduction to Behavior Genetics, Personality Psychology 1, March 2020.
+\item The Replication Crisis, Research Design, March 2020.
+\item Statistical Power, Research Design, March 2020.
+\item The Replication Crisis and Statistical Power (3 lectures), Research Design, January-February 2021.
+\end{itemize}
+
+\subsection*{Teaching Assistant / Seminar Leader}
+Norwegian University of Science and Technology, Trondheim, Norway, 2018 -- 2020.
+\begin{itemize}
+\item Weekly seminars, Quantitative Methods (master's level), Fall 2018.
+\item Weekly seminars, Quantitative Methods (master's level), Fall 2019.
+\item Full day seminar, Introduction to Stata (for employees), November 2019.
+\item Teaching assistant, Bachelor's project in developmental psychology, Spring 2020.
+\end{itemize}
+\end{document}

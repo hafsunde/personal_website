@@ -33,11 +33,13 @@ Decided:
 
 To do:
 
-- [ ] **Rebuild the CV in LaTeX**, reproducing the content of the current `assets/cv.pdf`.
-- [ ] **Generate its publications section from `data/publications.yml`** rather than maintaining the list twice.
-- [ ] **Generate the HTML CV page** from the same source, replacing the current `cv.qmd`, with a download link to the PDF.
-- [ ] **Add the workflow check** that the committed PDF (and, if needed, the HTML page) matches the source.
+- [x] **Rebuild the CV in LaTeX**, reproducing the content of the current `assets/cv.pdf`. Source: `cv/cv.tex`; local build and maintenance instructions: `cv/README.md`. UiO researcher position ends March 2026; newer talks remain to be added manually.
+- [x] **Generate its publications section from `data/publications.yml`** rather than maintaining the list twice.
+- [x] **Generate the HTML CV page** from the same source, replacing the current `cv.qmd`, with a download link to the PDF.
+- [x] **Add the workflow check** that the committed PDF (and, if needed, the HTML page) matches the source. Source/PDF fingerprints in `cv/build.json` are checked without compiling LaTeX in CI.
 - [ ] **Keep the current `assets/cv.pdf` as a fallback** until the generated PDF and page look right side by side.
+
+The original PDF is retained locally at `tmp/pdfs/cv-original.pdf` and in Git history. The new PDF has been visually reviewed; the HTML renders successfully, but a browser visual review is still pending.
 
 ---
 

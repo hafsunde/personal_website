@@ -1,0 +1,14 @@
+{
+  "inputs": {
+    "cv/cv.tex": "d671e52ea0e27c22794fe4b87cfa75c6ca8746a46353b94eb452922cfe5eadfe",
+    "data/publications.yml": "0148d6ffdac0dcd063fd608f18b4bac97db7de1c41b28915599b342cab1e9ec7",
+    "scripts/cv.py": "14b7041b976f06011fb2be5ebb0fce0f612bc4be67e6bca9d333602b9c2a4d8e",
+    "cv/requirements.txt": "0969da99a0bc2a1b71ed50584560f4588a37567ac63af3ddbaf3c4617ca5621a"
+  },
+  "pdf_sha256": "f1786b2618309a4a50723cafb8ab3a5d58473d31475b12d56154558f1957b98a",
+  "toolchain": {
+    "lualatex": "This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12)",
+    "quarto": "1.10.18",
+    "pyyaml": "6.0.3"
+  }
+}

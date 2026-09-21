@@ -13,3 +13,16 @@ Thumbs.db
 
 /.quarto/
 **/*.quarto_ipynb
+
+# Local CV build and visual review output
+/tmp/
+__pycache__/
+
+# Direct LaTeX-editor builds; assets/cv.pdf is the committed CV.
+/cv/*.aux
+/cv/*.fdb_latexmk
+/cv/*.fls
+/cv/*.log
+/cv/*.out
+/cv/*.pdf
+/cv/*.synctex.gz
