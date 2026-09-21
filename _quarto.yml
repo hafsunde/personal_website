@@ -52,6 +52,8 @@ website:
 
 format:
   html:
+    # Identify the preferred URL when Pages serves multiple forms of a page URL.
+    canonical-url: true
     # Dark is listed first so the site starts in dark mode; the toggle still switches.
     theme:
       dark: [darkly, assets/styles.scss]

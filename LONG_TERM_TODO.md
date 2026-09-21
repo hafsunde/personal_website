@@ -13,9 +13,10 @@ Done on 2026-09-14: DNS at Squarespace points at GitHub Pages (apex A/AAAA recor
 - `/` and `/contact` match the old site, and `/scientific-papers` redirects to `/publications`. The old CV link (`/s/HFS_AcadamicCV_june25.pdf`) is deliberately not kept.
 - Extensionless URLs (`/publications`) are served directly by Pages; a trailing slash (`/publications/`) 404s.
 
+Done on 2026-09-21: Cancelled squarespace subscription (still runst to March 2027), but kept the domain subscription
+
 Remaining:
 
-- [ ] **Cancel the Squarespace website plan** once the new site has been stable for a few days. It renews on 2027-03-21 for $228, so cancel before then. The domain is a separate "Domains" subscription (about $20/year, WHOIS privacy included): keep it with auto-renew on, and if Squarespace asks what to do with the domain, keep it.
 - [ ] **Revisit the registrar** (optional). Staying at Squarespace is fine. Moving to Cloudflare or Porkbun would save about $10/year. If done, recreate every DNS record at the new provider first, including the `_github-pages-challenge-hafsunde` TXT record, and don't let the registration lapse (it expires 2027-03-21 unless renewed).
 
 ---
@@ -46,6 +47,4 @@ The original PDF is retained locally at `tmp/pdfs/cv-original.pdf` and in Git hi
 ## Smaller parked items
 
 - [ ] Blog RSS feed (optional). The first post went up on 2026-09-14; the listing has `feed: false`, so there is no feed yet. See `blog/README.md` for how to write posts.
-- [ ] Revisit the design once content is stable. In particular, consider fonts and colors.
-- [ ] Make the site accessible and reasonably optimised for Google and other search engines.
 - [ ] Add a skill or workflow that checks that the publication list is up to date (new preprints, preprints that have been published, updated details in published papers). Manual for now; could be automated later.
