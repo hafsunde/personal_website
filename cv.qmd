@@ -8,7 +8,10 @@ description-meta: "Academic CV for Hans Fredrik Sunde."
 ::: {.cv-content}
 ```{r}
 #| results: asis
-python <- Sys.which("python")
+python <- Sys.getenv("CV_PYTHON")
+if (!nzchar(python) || !file.exists(python)) {
+  python <- Sys.which("python")
+}
 if (!nzchar(python)) python <- Sys.which("python3")
 if (!nzchar(python)) stop("Python is required to render the CV")
 # Read UTF-8 explicitly: capturing stdout as R strings uses the Windows locale.

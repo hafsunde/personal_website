@@ -31,18 +31,25 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Select Python interpreter
+        run: |
+          echo "CV_PYTHON=$(python -c 'import sys; print(sys.executable)')" >> "$GITHUB_ENV"
+          python --version
+
       - name: Install CV dependencies
-        run: python -m pip install -r cv/requirements.txt
+        run: |
+          $CV_PYTHON -m pip install -r cv/requirements.txt
+          $CV_PYTHON -c "import yaml; print('PyYAML available')"
 
       - name: Check committed CV PDF matches its sources
-        run: python scripts/cv.py check
+        run: $CV_PYTHON scripts/cv.py check
 
       - uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: 1.10.18
 
       - name: Check CV generation and stale-file detection
-        run: python -m unittest discover -s tests -p test_cv.py
+        run: $CV_PYTHON -m unittest discover -s tests -p test_cv.py
 
       - uses: r-lib/actions/setup-r@v2
         with:
@@ -51,11 +58,13 @@ jobs:
       - name: Install R packages
         run: Rscript -e 'install.packages(c("knitr", "rmarkdown", "yaml"))'
 
-      - name: Reinstall Python CV dependencies before rendering
-        run: python -m pip install -r cv/requirements.txt
+      - name: Verify Python CV dependencies before rendering
+        run: $CV_PYTHON -c "import yaml; print('PyYAML available')"
 
       - name: Render
         run: quarto render
+        env:
+          CV_PYTHON: ${{ env.CV_PYTHON }}
 
       - uses: actions/upload-pages-artifact@v5
         with:
