@@ -47,5 +47,6 @@ The original PDF is retained locally at `tmp/pdfs/cv-original.pdf` and in Git hi
 
 ## Smaller parked items
 
+- [ ] Review and add missing invited talks, conference presentations, teaching, and similar professional activities since summer 2025. The October 2026 CV update added selected later activities, but this period still needs a fuller review with Hans Fredrik. Cross-check his NVA profile and confirm which co-authored conference contributions he personally presented.
 - [ ] Blog RSS feed (optional). The first post went up on 2026-09-14; the listing has `feed: false`, so there is no feed yet. See `blog/README.md` for how to write posts.
 - [ ] Add a skill or workflow that checks that the publication list is up to date (new preprints, preprints that have been published, updated details in published papers). Manual for now; could be automated later.

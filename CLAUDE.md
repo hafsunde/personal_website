@@ -78,6 +78,8 @@ For maintenance later: adding a new paper should be "pull it from Zotero, append
 
 ## Accuracy
 
+Hans Fredrik's public NVA (Norwegian Research Information Repository) profile is https://nva.sikt.no/research-profile/998102. Use it to cross-check conference presentations, invited talks, media appearances, and other research outputs. Public records can also be read through https://api.nva.unit.no/cristin/person/998102 and https://api.nva.unit.no/search/resources?contributor=998102&size=100 (check `totalHits` for pagination). Co-authorship does not establish who presented a talk; confirm with Hans Fredrik. Prefer direct publisher, article, or episode links over NVA links on the website and CV.
+
 Bibliographic metadata must be verified, not transcribed from memory or from a rendered page. Every DOI must resolve, and author strings and venues should be checked against Zotero, ORCID `0000-0001-8797-5422`, or the publisher record. Where Zotero and the old Squarespace list disagree, resolve the DOI and use the publisher record — don't silently prefer one source. An unverifiable entry stays out of the file rather than going in provisionally; flag it instead.
 
 Some publishers (Wiley, PNAS) return 403 to scripted HTML requests. Check DOIs with content negotiation (`Accept: application/vnd.citationstyles.csl+json` against `https://doi.org/<doi>`), not by loading the landing page.
