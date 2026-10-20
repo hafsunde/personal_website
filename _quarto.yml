@@ -32,6 +32,8 @@ website:
         text: Publications
       - href: cv.qmd
         text: CV
+      - href: media.qmd
+        text: Media
       - href: blog/index.qmd
         text: Blog
       - href: contact.qmd

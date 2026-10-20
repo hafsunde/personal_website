@@ -1,0 +1,24 @@
+---
+title: "Selected media and public engagement"
+description-meta: "Selected podcasts, interviews and public writing by Hans Fredrik Sunde."
+---
+
+The [CV](cv.qmd#media-and-public-engagement) contains the full list.
+
+```{r}
+#| results: asis
+python <- Sys.getenv("CV_PYTHON")
+if (!nzchar(python) || !file.exists(python)) {
+  python <- Sys.which("python")
+}
+if (!nzchar(python)) python <- Sys.which("python3")
+if (!nzchar(python)) stop("Python is required to render the CV")
+# Read UTF-8 explicitly: capturing stdout as R strings uses the Windows locale.
+cv_output <- tempfile(fileext = ".html")
+cv_status <- system2(python, c("scripts/cv.py", "media"), stdout = cv_output)
+if (cv_status != 0L) stop("CV generation failed; see the error above")
+cv_html <- readLines(cv_output, encoding = "UTF-8", warn = FALSE)
+unlink(cv_output)
+cat("```{=html}\n", paste(cv_html, collapse = "\n"), "\n```\n", sep = "")
+```
+

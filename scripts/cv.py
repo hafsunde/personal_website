@@ -1,12 +1,14 @@
 """Build the CV locally, render its HTML body, or check committed provenance.
 
-Run from any directory: python scripts/cv.py {build,html,check}.
+Run from any directory: python scripts/cv.py {build,html,media,check}.
 """
 
 import argparse
 import hashlib
+import html as html_entities
 import json
 import os
+import re
 from pathlib import Path
 import shutil
 import subprocess
@@ -198,7 +200,7 @@ def build():
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=("build", "html", "check"))
+    parser.add_argument("command", choices=("build", "html", "media", "check"))
     args = parser.parse_args()
     # R's captured stdout must be UTF-8 on Windows as well as Linux.
     sys.stdout.reconfigure(encoding="utf-8")
@@ -213,7 +215,23 @@ def main():
             check()
             # ASCII entities survive R/knitr even under a non-UTF-8 Windows
             # locale, while browsers display the original Unicode characters.
-            print(html().encode("ascii", "xmlcharrefreplace").decode("ascii"))
+            content = html()
+            if args.command == "media":
+                # Media is the final CV section; reuse its canonical content.
+                sections = re.split(r'<h2 class="unnumbered" id="media-and-public-engagement">.*?</h2>', content, flags=re.DOTALL)
+                if len(sections) != 2:
+                    raise ValueError("Expected one final media section in CV HTML")
+                entries = re.findall(r'<li>.*?</li>', sections[1], flags=re.DOTALL)
+                selected = yaml.safe_load((ROOT / "data/selected-media.yml").read_text(encoding="utf-8"))
+                items = []
+                for title in selected:
+                    matches = [entry for entry in entries if title in " ".join(
+                        html_entities.unescape(re.sub(r'<[^>]+>', '', entry)).split())]
+                    if len(matches) != 1:
+                        raise ValueError("Expected one media entry matching: " + title)
+                    items.append(matches[0])
+                content = "<ul>\n" + "\n".join(items) + "\n</ul>\n"
+            print(content.encode("ascii", "xmlcharrefreplace").decode("ascii"))
     except (RuntimeError, ValueError, OSError) as error:
         print(str(error), file=sys.stderr)
         return 1
