@@ -76,6 +76,16 @@ Working with the library:
 
 For maintenance later: adding a new paper should be "pull it from Zotero, append the entry, push" — not a manual transcription.
 
+### Adding a paper (procedure)
+
+1. **Find it.** Pull the Zotero item (search by title or author; a paper that isn't in Zotero yet is not an error, so check the DOI record instead). Check for a preprint/published duplicate. Resolve the DOI through content negotiation, and take title, authors and venue from that record.
+2. **Append the entry** to `data/publications.yml`. Don't set `authorship` unless Hans Fredrik confirms joint first or last authorship.
+3. **Draft the `description`** from the abstract and have Hans Fredrik approve it before it stays.
+4. **Rebuild the CV.** The CV hashes `data/publications.yml`, so any change to it makes the CV stale and breaks the full render. Run `python scripts/cv.py build`, check that the new entries appear in the right group, then commit `assets/cv.pdf`, `cv/build.json` and `cv/cv.tex` together with the YAML.
+5. **Render everything.** Run a full `quarto render`, not a single page. A failed render leaves `_site` half-built, so never commit after a failure. Fix the cause first. A style change gives the stylesheets new hashed names, which only a full render propagates to every page.
+6. **Commit the real changes only.** Git shows many `_site` files as modified purely because of line endings; leave those out. Stage the YAML, CV files, `assets/`, `.qmd`, and the `_site` files whose diff is real. Don't push until asked.
+7. **After the push,** a stale PDF or page is usually browser cache, so check with a hard refresh before assuming the deploy failed.
+
 ## Accuracy
 
 Hans Fredrik's public NVA (Norwegian Research Information Repository) profile is https://nva.sikt.no/research-profile/998102. Use it to cross-check conference presentations, invited talks, media appearances, and other research outputs. Public records can also be read through https://api.nva.unit.no/cristin/person/998102 and https://api.nva.unit.no/search/resources?contributor=998102&size=100 (check `totalHits` for pagination). Co-authorship does not establish who presented a talk; confirm with Hans Fredrik. Prefer direct publisher, article, or episode links over NVA links on the website and CV.
