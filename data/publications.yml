@@ -32,7 +32,7 @@
   doi: "10.64898/2026.09.01.748516"
   type: preprint
   authorship: joint-last
-  description: "Introduces RAVEL, a model that uses two independent polygenic scores, and shows that once assortative mating is modelled, parents' genotypes explain less than 0.5% as much variance in children's test scores as the child's own genotype, down from 10% in naive trio analyses."
+  description: "Introduces RAVEL, a model using two independent polygenic scores, and shows that once assortative mating is modelled, parents' genetic liabilities explain under 0.5% as much variance in children's test scores as the child's own, down from 10% in naive analyses."
 
 - id: bjorndal2026fgrs
   authors: ["Bjørndal, L.D.", "Valstad, M.", "Ayorech, Z.", "Eilertsen, E.M.", "van Jole, O.", "Sunde, H.F.", "Grande, T.J.M.", "Torvik, F.A.", "Kendler, K.S.", "Ystrom, E."]
@@ -50,7 +50,7 @@
   year: 2025
   doi: "10.31234/osf.io/rehdj_v1"
   type: preprint
-  description: "Using register data on 569,035 Norwegian children and extended family models, finds that the .31 correlation between parents' education and children's school achievement is 68% genetic, 12% parental environment and 20% environment shared with the extended family."
+  description: "Using standardized national test scores at ages 10–14, finds that the .31 correlation between parents' education and children's achievement reflects genetic transmission (68%), parental environment (12%) and extended-family environment (20%)."
 
 - id: bernardo2026parentaleducation
   authors: ["Bernardo, J.B.", "Sunde, H.F.", "Torvik, F.A.", "van Bergen, E."]
@@ -59,7 +59,7 @@
   year: 2026
   doi: "10.31234/osf.io/tbzd2_v2"
   type: preprint
-  description: "Finds that teacher evaluations and national exams give near-identical results, and that 66% of the parent–offspring resemblance underlying the association between parents' education and teenagers' grades reflects genetic transmission, alongside extended-family (25%) and parental (10%) transmission."
+  description: "Using grade point average at age 16, finds that teacher grades and national exams give near-identical results, and that parent–offspring resemblance reflects genetic transmission (66%), extended-family (25%) and parental (10%) transmission."
 
 # -- 2026 ----------------------------------------------------------------------
 
