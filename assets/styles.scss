@@ -438,3 +438,15 @@ body.quarto-dark {
     color: $muted-dark;
   }
 }
+
+// Publications page: "first- and last-author only" filter (toggled in publications.qmd)
+.pub-filter {
+  display: block;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.pub-filtered .pub:not(.pub-first):not(.pub-last),
+.pub-empty {
+  display: none;
+}

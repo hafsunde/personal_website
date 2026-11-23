@@ -8,6 +8,19 @@ description-meta: "Peer-reviewed papers and preprints by Hans Fredrik Sunde."
 
 Papers where I am [first author]{.role-label .role-first} or [last author]{.role-label .role-last} are marked, including joint first and joint last authorship.
 
+```{=html}
+<label class="pub-filter"><input type="checkbox" id="pub-filter"> Show only first- and last-author papers</label>
+<script>
+document.getElementById("pub-filter").addEventListener("change", function () {
+  document.body.classList.toggle("pub-filtered", this.checked);
+  document.querySelectorAll("section.level2").forEach(function (sec) {
+    var any = sec.querySelector(".pub-first, .pub-last");
+    sec.classList.toggle("pub-empty", this.checked && !any);
+  }, this);
+});
+</script>
+```
+
 ```{r}
 #| results: asis
 source("R/publications.R")
