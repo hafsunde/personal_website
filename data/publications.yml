@@ -52,7 +52,25 @@
   type: preprint
   description: "Using register data on 569,035 Norwegian children and extended family models, finds that the .31 correlation between parents' education and children's school achievement is 68% genetic, 12% parental environment and 20% environment shared with the extended family."
 
+- id: bernardo2026parentaleducation
+  authors: ["Bernardo, J.B.", "Sunde, H.F.", "Torvik, F.A.", "van Bergen, E."]
+  title: "The Link Between Parental Education and Teenagers' School Grades is Largely Genetic – Evidence from a Children-of-Twins Study"
+  venue: "PsyArXiv"
+  year: 2026
+  doi: "10.31234/osf.io/tbzd2_v2"
+  type: preprint
+  description: "Finds that teacher evaluations and national exams give near-identical results, and that 66% of the parent–offspring resemblance underlying the association between parents' education and teenagers' grades reflects genetic transmission, alongside extended-family (25%) and parental (10%) transmission."
+
 # -- 2026 ----------------------------------------------------------------------
+
+- id: bignardi2026assortative
+  authors: ["Bignardi, G.", "Sunde, H.F.", "Bruins, S.", "Balbona, J.V.", "Fisher, S.E.", "Boomsma, D.I."]
+  title: "Assortative mating can mask non-additive genetic contributions to individual differences"
+  venue: "Molecular Psychiatry"
+  year: 2026
+  doi: "10.1038/s41380-026-03932-6"
+  type: article
+  description: "Shows with simulations and data from 9,000 Dutch twin families that accounting for spousal correlations (r = .21–.29) unmasks non-additive genetic variance of 13–19% in height, openness and borderline personality features, and shrinks additive estimates by 14–39%."
 
 - id: sunde2026divorce
   authors: ["Sunde, H.F.", "Dierker, P."]
